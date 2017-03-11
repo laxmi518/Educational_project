@@ -1,0 +1,7 @@
+.interface public abstract  Comparator
+.super java/lang/Object
+
+.method public abstract compare(LMyObject;LMyObject;)I
+;  (108) Method Declaration (compare)
+.end method
+

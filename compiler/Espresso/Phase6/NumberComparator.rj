@@ -1,0 +1,147 @@
+.class public NumberComparator
+.super java/lang/Object
+.implements Comparator
+
+.field private static inst LComparator;
+
+.method static <clinit>()V
+	.limit stack 50
+	.limit locals 0
+;  (118) Static Initializer
+;  (118) Expression Statement
+;  (118) Assignment
+;  (118) Name Expression --
+;  (118) End NameExpr
+;  (118) New
+	new NumberComparator
+	dup
+	invokespecial NumberComparator/<init>()V
+;  (118) End New
+	putstatic NumberComparator/inst LComparator;
+;  (118) End Assignment
+;  (118) End ExprStat
+	return
+.end method
+
+.method public static getInstance()LComparator;
+	.limit stack 50
+	.limit locals 0
+;  (121) Method Declaration (getInstance)
+;  (121) Return Statement
+;  (121) Field Reference
+;  (121) Name Expression --
+;  (121) End NameExpr
+	getstatic NumberComparator/inst LComparator;
+;  (121) End FieldRef
+	areturn
+;  (121) End ReturnStat
+.end method
+
+.method private <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (123) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (123) Field Init Generation Start
+;  (123) Field Init Generation End
+	return
+.end method
+
+.method public compare(LMyObject;LMyObject;)I
+	.limit stack 50
+	.limit locals 5
+;  (125) Method Declaration (compare)
+;  (127) Local Variable Declaration
+;  (127) Cast Expression
+;  (127) Name Expression --
+	aload_1
+;  (127) End NameExpr
+	checkcast Number
+;  (127) End CastExpr
+	astore_3
+;  (127) End LocalDecl
+;  (128) Local Variable Declaration
+;  (128) Cast Expression
+;  (128) Name Expression --
+	aload_2
+;  (128) End NameExpr
+	checkcast Number
+;  (128) End CastExpr
+	astore 4
+;  (128) End LocalDecl
+;  (130) If Statement
+;  (130) Binary Expression
+;  (130) Invocation
+;  (130) Name Expression --
+	aload_3
+;  (130) End NameExpr
+	invokevirtual Number/getMyDouble()D
+;  (130) End Invocation
+;  (130) Invocation
+;  (130) Name Expression --
+	aload 4
+;  (130) End NameExpr
+	invokevirtual Number/getMyDouble()D
+;  (130) End Invocation
+	dcmpg
+	iflt L2
+	iconst_0
+	goto L3
+L2:
+	iconst_1
+L3:
+;  (130) End BinaryExpr
+	ifeq L1
+;  (131) Return Statement
+;  (131) Unary Pre Expression
+;  (131) Literal
+	iconst_1
+;  (131) End Literal
+	ineg
+;  (131) End UnaryPreExpr
+	ireturn
+;  (131) End ReturnStat
+L1:
+;  (130) End IfStat
+;  (132) If Statement
+;  (132) Binary Expression
+;  (132) Invocation
+;  (132) Name Expression --
+	aload_3
+;  (132) End NameExpr
+	invokevirtual Number/getMyDouble()D
+;  (132) End Invocation
+;  (132) Invocation
+;  (132) Name Expression --
+	aload 4
+;  (132) End NameExpr
+	invokevirtual Number/getMyDouble()D
+;  (132) End Invocation
+	dcmpg
+	ifgt L5
+	iconst_0
+	goto L6
+L5:
+	iconst_1
+L6:
+;  (132) End BinaryExpr
+	ifeq L4
+;  (133) Return Statement
+;  (133) Literal
+	iconst_1
+;  (133) End Literal
+	ireturn
+;  (133) End ReturnStat
+L4:
+;  (132) End IfStat
+;  (134) Return Statement
+;  (134) Literal
+	iconst_0
+;  (134) End Literal
+	ireturn
+;  (134) End ReturnStat
+.end method
+

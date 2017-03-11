@@ -1,0 +1,213 @@
+.class public Elist
+.super java/lang/Object
+
+.field public next LElist;
+
+.field public e LElement;
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (38) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (38) Field Init Generation Start
+	aload_0
+;  (35) Literal
+	aconst_null
+;  (35) End Literal
+	putfield Elist/next LElist;
+;  (38) Field Init Generation End
+	return
+.end method
+
+.method public <init>(I)V
+	.limit stack 50
+	.limit locals 2
+;  (40) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (40) Field Init Generation Start
+	aload_0
+;  (35) Literal
+	aconst_null
+;  (35) End Literal
+	putfield Elist/next LElist;
+;  (40) Field Init Generation End
+;  (41) Expression Statement
+;  (41) Assignment
+;  (41) This
+	aload_0
+;  (41) End This
+;  (41) Literal
+	aconst_null
+;  (41) End Literal
+	putfield Elist/e LElement;
+;  (41) End Assignment
+;  (41) End ExprStat
+;  (42) If Statement
+;  (42) Binary Expression
+;  (42) Name Expression --
+	iload_1
+;  (42) End NameExpr
+;  (42) Literal
+	iconst_0
+;  (42) End Literal
+	if_icmpne L2
+	iconst_0
+	goto L3
+L2:
+	iconst_1
+L3:
+;  (42) End BinaryExpr
+	ifeq L1
+;  (43) Expression Statement
+;  (43) Assignment
+;  (43) This
+	aload_0
+;  (43) End This
+;  (43) New
+	new Elist
+	dup
+;  (43) Binary Expression
+;  (43) Name Expression --
+	iload_1
+;  (43) End NameExpr
+;  (43) Literal
+	iconst_1
+;  (43) End Literal
+	isub
+;  (43) End BinaryExpr
+	invokespecial Elist/<init>(I)V
+;  (43) End New
+	putfield Elist/next LElist;
+;  (43) End Assignment
+;  (43) End ExprStat
+L1:
+;  (42) End IfStat
+	return
+.end method
+
+.method public get(I)LElement;
+	.limit stack 50
+	.limit locals 2
+;  (47) Method Declaration (get)
+;  (48) If Statement
+;  (48) Binary Expression
+;  (48) Name Expression --
+	iload_1
+;  (48) End NameExpr
+;  (48) Literal
+	iconst_0
+;  (48) End Literal
+	if_icmpeq L6
+	iconst_0
+	goto L7
+L6:
+	iconst_1
+L7:
+;  (48) End BinaryExpr
+	ifeq L4
+;  (49) Return Statement
+;  (49) Field Reference
+;  (49) This
+	aload_0
+;  (49) End This
+	getfield Elist/e LElement;
+;  (49) End FieldRef
+	areturn
+;  (49) End ReturnStat
+	goto L5
+L4:
+;  (51) Return Statement
+;  (51) Invocation
+;  (51) Field Reference
+;  (51) This
+	aload_0
+;  (51) End This
+	getfield Elist/next LElist;
+;  (51) End FieldRef
+;  (51) Binary Expression
+;  (51) Name Expression --
+	iload_1
+;  (51) End NameExpr
+;  (51) Literal
+	iconst_1
+;  (51) End Literal
+	isub
+;  (51) End BinaryExpr
+	invokevirtual Elist/get(I)LElement;
+;  (51) End Invocation
+	areturn
+;  (51) End ReturnStat
+L5:
+;  (48) End IfStat
+	aconst_null
+	areturn
+.end method
+
+.method public put(ILElement;)V
+	.limit stack 50
+	.limit locals 3
+;  (54) Method Declaration (put)
+;  (55) If Statement
+;  (55) Binary Expression
+;  (55) Name Expression --
+	iload_1
+;  (55) End NameExpr
+;  (55) Literal
+	iconst_0
+;  (55) End Literal
+	if_icmpeq L10
+	iconst_0
+	goto L11
+L10:
+	iconst_1
+L11:
+;  (55) End BinaryExpr
+	ifeq L8
+;  (56) Expression Statement
+;  (56) Assignment
+;  (56) This
+	aload_0
+;  (56) End This
+;  (56) Name Expression --
+	aload_2
+;  (56) End NameExpr
+	putfield Elist/e LElement;
+;  (56) End Assignment
+;  (56) End ExprStat
+	goto L9
+L8:
+;  (58) Expression Statement
+;  (58) Invocation
+;  (58) Field Reference
+;  (58) This
+	aload_0
+;  (58) End This
+	getfield Elist/next LElist;
+;  (58) End FieldRef
+;  (58) Binary Expression
+;  (58) Name Expression --
+	iload_1
+;  (58) End NameExpr
+;  (58) Literal
+	iconst_1
+;  (58) End Literal
+	isub
+;  (58) End BinaryExpr
+;  (58) Name Expression --
+	aload_2
+;  (58) End NameExpr
+	invokevirtual Elist/put(ILElement;)V
+;  (58) End Invocation
+;  (58) End ExprStat
+L9:
+;  (55) End IfStat
+	return
+.end method
+

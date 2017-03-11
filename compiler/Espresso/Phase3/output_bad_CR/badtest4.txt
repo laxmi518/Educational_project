@@ -1,0 +1,30 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'A' into global class table.
+MethodDecl:	 Inserting method 'f' with signature 'I' into method table for class 'A'.
+ClassDecl:	 Generating default construction <init>() for class 'A'
+ClassDecl:	 Inserting class 'B' into global class table.
+MethodDecl:	 Inserting method 'f' with signature 'I' into method table for class 'B'.
+ClassDecl:	 Generating default construction <init>() for class 'B'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'A'
+ClassDecl:	 Visiting class 'A'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'f' with signature 'I' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'a'.
+Block:		 Creating new scope for Block.
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on A
+ClassDecl:	 Visiting class 'B'
+ClassType:	 Looking up class/interface 'A' in class table.
+MethodDecl:	 Creating new scope for Method 'f' with signature 'I' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'a'.
+Block:		 Creating new scope for Block.
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+/var/www/html/wwwweb/public_html/matt/CSC460/Espresso/upload/badtest4.java.10-20-22:17:49: Method 'f' has been declared with two different return types:
+/var/www/html/wwwweb/public_html/matt/CSC460/Espresso/upload/badtest4.java.10-20-22:17:49:10:  boolean f( int )
+/var/www/html/wwwweb/public_html/matt/CSC460/Espresso/upload/badtest4.java.10-20-22:17:49:6:  int f( int )

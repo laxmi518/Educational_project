@@ -1,0 +1,13 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'A' into global class table.
+MethodDecl:	 Inserting method 'f' with signature '' into method table for class 'A'.
+ClassDecl:	 Generating default construction <init>() for class 'A'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'A'
+ClassType:	 Setting myDecl for 'B'
+/var/www/html/wwwweb/public_html/matt/CSC460/Espresso/upload/badtest10.java.10-20-22:17:44:5: Class 'B' not found.

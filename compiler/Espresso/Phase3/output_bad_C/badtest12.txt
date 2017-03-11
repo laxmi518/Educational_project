@@ -1,0 +1,16 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'A' into global class table.
+MethodDecl:	 Inserting method 'f' with signature '' into method table for class 'A'.
+ClassDecl:	 Generating default construction <init>() for class 'A'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassDecl:	 Visiting class 'A'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'f' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+FieldRef:	 Looking up field 'a'.
+/Users/laxmikadariya/Documents/Education/first_sem/compiler/project/Espresso/Tests/Phase3/Espresso/BadTests/badtest12.java:5: Field 'a' not found.

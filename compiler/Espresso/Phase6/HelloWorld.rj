@@ -1,0 +1,175 @@
+.class public HelloWorld
+.super java/lang/Object
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 1
+;  (8) Method Declaration (main)
+;  (9) Expression Statement
+;  (9) Invocation
+;  (9) Unary Pre Expression
+;  (9) Literal
+	ldc 229985452
+;  (9) End Literal
+	ineg
+;  (9) End UnaryPreExpr
+	invokestatic HelloWorld/randomString(I)V
+;  (9) End Invocation
+;  (9) End ExprStat
+;  (10) Expression Statement
+;  (10) Invocation
+;  (10) Field Reference
+;  (10) Name Expression --
+;  (10) End NameExpr
+	getstatic System/out LIo;
+;  (10) End FieldRef
+	pop
+;  (10) Literal
+	bipush 32
+;  (10) End Literal
+	invokestatic Io/print(C)V
+;  (10) End Invocation
+;  (10) End ExprStat
+;  (11) Expression Statement
+;  (11) Invocation
+;  (11) Unary Pre Expression
+;  (11) Literal
+	ldc 147909649
+;  (11) End Literal
+	ineg
+;  (11) End UnaryPreExpr
+	invokestatic HelloWorld/randomString(I)V
+;  (11) End Invocation
+;  (11) End ExprStat
+;  (12) Expression Statement
+;  (12) Invocation
+;  (12) Field Reference
+;  (12) Name Expression --
+;  (12) End NameExpr
+	getstatic System/out LIo;
+;  (12) End FieldRef
+	pop
+;  (12) Literal
+	ldc ""
+;  (12) End Literal
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (12) End Invocation
+;  (12) End ExprStat
+	return
+.end method
+
+.method public static randomString(I)V
+	.limit stack 50
+	.limit locals 5
+;  (15) Method Declaration (randomString)
+;  (16) Local Variable Declaration
+;  (16) New
+	new Random
+	dup
+;  (16) Name Expression --
+	iload_0
+;  (16) End NameExpr
+	i2l
+	invokespecial Random/<init>(J)V
+;  (16) End New
+	astore_1
+;  (16) End LocalDecl
+;  (17) For Statement
+;  (17) Local Variable Declaration
+;  (17) Literal
+	iconst_0
+;  (17) End Literal
+	istore_2
+;  (17) End LocalDecl
+L1:
+;  (18) Local Variable Declaration
+;  (18) Invocation
+;  (18) Name Expression --
+	aload_1
+;  (18) End NameExpr
+;  (18) Literal
+	bipush 27
+;  (18) End Literal
+	invokevirtual Random/nextInt(I)I
+;  (18) End Invocation
+	istore_3
+;  (18) End LocalDecl
+;  (19) If Statement
+;  (19) Binary Expression
+;  (19) Name Expression --
+	iload_3
+;  (19) End NameExpr
+;  (19) Literal
+	iconst_0
+;  (19) End Literal
+	if_icmpeq L5
+	iconst_0
+	goto L6
+L5:
+	iconst_1
+L6:
+;  (19) End BinaryExpr
+	ifeq L4
+;  (19) Break Statement
+	goto L2
+;  (19) End BreakStat
+L4:
+;  (19) End IfStat
+;  (20) Local Variable Declaration
+;  (20) Cast Expression
+;  (20) Binary Expression
+;  (20) Literal
+	bipush 96
+;  (20) End Literal
+;  (20) Name Expression --
+	iload_3
+;  (20) End NameExpr
+	iadd
+;  (20) End BinaryExpr
+	i2c
+;  (20) End CastExpr
+	istore 4
+;  (20) End LocalDecl
+;  (21) Expression Statement
+;  (21) Invocation
+;  (21) Field Reference
+;  (21) Name Expression --
+;  (21) End NameExpr
+	getstatic System/out LIo;
+;  (21) End FieldRef
+	pop
+;  (21) Name Expression --
+	iload 4
+;  (21) End NameExpr
+	invokestatic Io/print(C)V
+;  (21) End Invocation
+;  (21) End ExprStat
+L3:
+;  (17) Expression Statement
+;  (17) Unary Post Expression
+;  (17) Name Expression --
+	iload_2
+;  (17) End NameExpr
+	iinc 2 1
+;  (17) End UnaryPostExpr
+	pop
+;  (17) End ExprStat
+	goto L1
+L2:
+;  (17) End ForStat
+	return
+.end method
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (0) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (0) Field Init Generation Start
+;  (0) Field Init Generation End
+	return
+.end method
+

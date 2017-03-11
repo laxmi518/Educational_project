@@ -1,0 +1,494 @@
+.class public Poly3
+.super Poly
+
+.field private a D
+
+.field private b D
+
+.field private c D
+
+.field private d D
+
+.method public <init>(DDDD)V
+	.limit stack 50
+	.limit locals 9
+;  (453) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial Poly/<init>()V
+;  (0) End CInvocation
+;  (453) Field Init Generation Start
+;  (453) Field Init Generation End
+;  (454) Expression Statement
+;  (454) Assignment
+;  (454) This
+	aload_0
+;  (454) End This
+;  (454) Name Expression --
+	dload_1
+;  (454) End NameExpr
+	putfield Poly3/a D
+;  (454) End Assignment
+;  (454) End ExprStat
+;  (455) Expression Statement
+;  (455) Assignment
+;  (455) This
+	aload_0
+;  (455) End This
+;  (455) Name Expression --
+	dload_3
+;  (455) End NameExpr
+	putfield Poly3/b D
+;  (455) End Assignment
+;  (455) End ExprStat
+;  (456) Expression Statement
+;  (456) Assignment
+;  (456) This
+	aload_0
+;  (456) End This
+;  (456) Name Expression --
+	dload 5
+;  (456) End NameExpr
+	putfield Poly3/c D
+;  (456) End Assignment
+;  (456) End ExprStat
+;  (457) Expression Statement
+;  (457) Assignment
+;  (457) This
+	aload_0
+;  (457) End This
+;  (457) Name Expression --
+	dload 7
+;  (457) End NameExpr
+	putfield Poly3/d D
+;  (457) End Assignment
+;  (457) End ExprStat
+	return
+.end method
+
+.method public evaluate(D)D
+	.limit stack 50
+	.limit locals 3
+;  (460) Method Declaration (evaluate)
+;  (461) Return Statement
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Field Reference
+;  (461) This
+	aload_0
+;  (461) End This
+	getfield Poly3/a D
+;  (461) End FieldRef
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+;  (461) Binary Expression
+;  (461) Binary Expression
+;  (461) Field Reference
+;  (461) This
+	aload_0
+;  (461) End This
+	getfield Poly3/b D
+;  (461) End FieldRef
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+	dadd
+;  (461) End BinaryExpr
+;  (461) Binary Expression
+;  (461) Field Reference
+;  (461) This
+	aload_0
+;  (461) End This
+	getfield Poly3/c D
+;  (461) End FieldRef
+;  (461) Name Expression --
+	dload_1
+;  (461) End NameExpr
+	dmul
+;  (461) End BinaryExpr
+	dadd
+;  (461) End BinaryExpr
+;  (461) Field Reference
+;  (461) This
+	aload_0
+;  (461) End This
+	getfield Poly3/d D
+;  (461) End FieldRef
+	dadd
+;  (461) End BinaryExpr
+	dreturn
+;  (461) End ReturnStat
+.end method
+
+.method public toString()Ljava/lang/String;
+	.limit stack 50
+	.limit locals 1
+;  (464) Method Declaration (toString)
+;  (465) Return Statement
+;  (465) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (465) Binary Expression
+;  (465) Binary Expression
+;  (465) Binary Expression
+;  (465) Field Reference
+;  (465) This
+	aload_0
+;  (465) End This
+	getfield Poly3/a D
+;  (465) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+;  (465) Literal
+	ldc "x^3"
+;  (465) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (465) End BinaryExpr
+;  (466) Ternary Statement
+;  (466) Binary Expression
+;  (466) Field Reference
+;  (466) This
+	aload_0
+;  (466) End This
+	getfield Poly3/b D
+;  (466) End FieldRef
+;  (466) Literal
+	iconst_0
+;  (466) End Literal
+	i2d
+	dcmpg
+	ifne L3
+	iconst_0
+	goto L4
+L3:
+	iconst_1
+L4:
+;  (466) End BinaryExpr
+	ifeq L1
+;  (466) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (466) Ternary Statement
+;  (466) Binary Expression
+;  (466) Field Reference
+;  (466) This
+	aload_0
+;  (466) End This
+	getfield Poly3/b D
+;  (466) End FieldRef
+;  (466) Literal
+	iconst_0
+;  (466) End Literal
+	i2d
+	dcmpg
+	iflt L7
+	iconst_0
+	goto L8
+L7:
+	iconst_1
+L8:
+;  (466) End BinaryExpr
+	ifeq L5
+;  (466) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (466) Literal
+	ldc " - "
+;  (466) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (466) Binary Expression
+;  (466) Unary Pre Expression
+;  (466) Literal
+	iconst_1
+;  (466) End Literal
+	ineg
+;  (466) End UnaryPreExpr
+	i2d
+;  (466) Field Reference
+;  (466) This
+	aload_0
+;  (466) End This
+	getfield Poly3/b D
+;  (466) End FieldRef
+	dmul
+;  (466) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (466) End BinaryExpr
+	goto L6
+L5:
+;  (466) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (466) Literal
+	ldc " + "
+;  (466) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (466) Field Reference
+;  (466) This
+	aload_0
+;  (466) End This
+	getfield Poly3/b D
+;  (466) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (466) End BinaryExpr
+L6:
+;  (466) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (466) Literal
+	ldc "x^2"
+;  (466) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (466) End BinaryExpr
+	goto L2
+L1:
+;  (466) Literal
+	ldc ""
+;  (466) End Literal
+L2:
+;  (466) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (465) End BinaryExpr
+;  (467) Ternary Statement
+;  (467) Binary Expression
+;  (467) Field Reference
+;  (467) This
+	aload_0
+;  (467) End This
+	getfield Poly3/c D
+;  (467) End FieldRef
+;  (467) Literal
+	iconst_0
+;  (467) End Literal
+	i2d
+	dcmpg
+	ifne L11
+	iconst_0
+	goto L12
+L11:
+	iconst_1
+L12:
+;  (467) End BinaryExpr
+	ifeq L9
+;  (467) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (467) Ternary Statement
+;  (467) Binary Expression
+;  (467) Field Reference
+;  (467) This
+	aload_0
+;  (467) End This
+	getfield Poly3/c D
+;  (467) End FieldRef
+;  (467) Literal
+	iconst_0
+;  (467) End Literal
+	i2d
+	dcmpg
+	iflt L15
+	iconst_0
+	goto L16
+L15:
+	iconst_1
+L16:
+;  (467) End BinaryExpr
+	ifeq L13
+;  (467) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (467) Literal
+	ldc " - "
+;  (467) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (467) Binary Expression
+;  (467) Unary Pre Expression
+;  (467) Literal
+	iconst_1
+;  (467) End Literal
+	ineg
+;  (467) End UnaryPreExpr
+	i2d
+;  (467) Field Reference
+;  (467) This
+	aload_0
+;  (467) End This
+	getfield Poly3/c D
+;  (467) End FieldRef
+	dmul
+;  (467) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (467) End BinaryExpr
+	goto L14
+L13:
+;  (467) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (467) Literal
+	ldc " + "
+;  (467) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (467) Field Reference
+;  (467) This
+	aload_0
+;  (467) End This
+	getfield Poly3/c D
+;  (467) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (467) End BinaryExpr
+L14:
+;  (467) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (467) Literal
+	ldc "x"
+;  (467) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (467) End BinaryExpr
+	goto L10
+L9:
+;  (467) Literal
+	ldc ""
+;  (467) End Literal
+L10:
+;  (467) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (465) End BinaryExpr
+;  (468) Ternary Statement
+;  (468) Binary Expression
+;  (468) Field Reference
+;  (468) This
+	aload_0
+;  (468) End This
+	getfield Poly3/d D
+;  (468) End FieldRef
+;  (468) Literal
+	iconst_0
+;  (468) End Literal
+	i2d
+	dcmpg
+	ifne L19
+	iconst_0
+	goto L20
+L19:
+	iconst_1
+L20:
+;  (468) End BinaryExpr
+	ifeq L17
+;  (468) Ternary Statement
+;  (468) Binary Expression
+;  (468) Field Reference
+;  (468) This
+	aload_0
+;  (468) End This
+	getfield Poly3/d D
+;  (468) End FieldRef
+;  (468) Literal
+	iconst_0
+;  (468) End Literal
+	i2d
+	dcmpg
+	iflt L23
+	iconst_0
+	goto L24
+L23:
+	iconst_1
+L24:
+;  (468) End BinaryExpr
+	ifeq L21
+;  (468) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (468) Literal
+	ldc " - "
+;  (468) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (468) Binary Expression
+;  (468) Unary Pre Expression
+;  (468) Literal
+	iconst_1
+;  (468) End Literal
+	ineg
+;  (468) End UnaryPreExpr
+	i2d
+;  (468) Field Reference
+;  (468) This
+	aload_0
+;  (468) End This
+	getfield Poly3/d D
+;  (468) End FieldRef
+	dmul
+;  (468) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (468) End BinaryExpr
+	goto L22
+L21:
+;  (468) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (468) Literal
+	ldc " + "
+;  (468) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (468) Field Reference
+;  (468) This
+	aload_0
+;  (468) End This
+	getfield Poly3/d D
+;  (468) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (468) End BinaryExpr
+L22:
+;  (468) Ternary
+	goto L18
+L17:
+;  (468) Literal
+	ldc ""
+;  (468) End Literal
+L18:
+;  (468) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (465) End BinaryExpr
+	areturn
+;  (465) End ReturnStat
+.end method
+

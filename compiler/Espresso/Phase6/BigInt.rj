@@ -1,0 +1,2131 @@
+.class public BigInt
+.super java/lang/Object
+
+.field private negative Z
+
+.field private digits [I
+
+.field private size I
+
+.method private howManyDigits(J)I
+	.limit stack 50
+	.limit locals 4
+;  (126) Method Declaration (howManyDigits)
+;  (127) Local Variable Declaration
+;  (127) Literal
+	iconst_0
+;  (127) End Literal
+	istore_3
+;  (127) End LocalDecl
+;  (128) If Statement
+;  (128) Binary Expression
+;  (128) Name Expression --
+	lload_1
+;  (128) End NameExpr
+;  (128) Literal
+	iconst_0
+;  (128) End Literal
+	i2l
+	lcmp
+	ifeq L2
+	iconst_0
+	goto L3
+L2:
+	iconst_1
+L3:
+;  (128) End BinaryExpr
+	ifeq L1
+;  (129) Return Statement
+;  (129) Literal
+	iconst_1
+;  (129) End Literal
+	ireturn
+;  (129) End ReturnStat
+L1:
+;  (128) End IfStat
+;  (130) While Statement
+L4:
+;  (130) Binary Expression
+;  (130) Name Expression --
+	lload_1
+;  (130) End NameExpr
+;  (130) Literal
+	iconst_0
+;  (130) End Literal
+	i2l
+	lcmp
+	ifgt L6
+	iconst_0
+	goto L7
+L6:
+	iconst_1
+L7:
+;  (130) End BinaryExpr
+	ifeq L5
+;  (131) Expression Statement
+;  (131) Unary Post Expression
+;  (131) Name Expression --
+	iload_3
+;  (131) End NameExpr
+	iinc 3 1
+;  (131) End UnaryPostExpr
+	pop
+;  (131) End ExprStat
+;  (132) Expression Statement
+;  (132) Assignment
+	lload_1
+;  (132) Literal
+	iconst_2
+;  (132) End Literal
+	lshr
+	lstore_1
+;  (132) End Assignment
+;  (132) End ExprStat
+	goto L4
+L5:
+;  (130) End WhileStat
+;  (134) Return Statement
+;  (134) Name Expression --
+	iload_3
+;  (134) End NameExpr
+	ireturn
+;  (134) End ReturnStat
+.end method
+
+.method public <init>(J)V
+	.limit stack 50
+	.limit locals 3
+;  (137) Constructor Declaration
+;  (138) Explicit Constructor Invocation
+	aload_0
+;  (138) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (138) Literal
+	ldc ""
+;  (138) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (138) Name Expression --
+	lload_1
+;  (138) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(J)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (138) End BinaryExpr
+	invokespecial BigInt/<init>(Ljava/lang/String;)V
+;  (138) End CInvocation
+	return
+.end method
+
+.method public <init>(Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 3
+;  (141) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (141) Field Init Generation Start
+	aload_0
+;  (122) Literal
+	iconst_0
+;  (122) End Literal
+	putfield BigInt/negative Z
+;  (141) Field Init Generation End
+;  (142) Expression Statement
+;  (142) Assignment
+;  (142) This
+	aload_0
+;  (142) End This
+;  (142) NewArray
+;  (142) Invocation
+;  (142) Name Expression --
+	aload_1
+;  (142) End NameExpr
+	invokevirtual java/lang/String/length()I
+;  (142) End Invocation
+	newarray int
+;  (142) End NewArray
+	putfield BigInt/digits [I
+;  (142) End Assignment
+;  (142) End ExprStat
+;  (143) For Statement
+;  (143) Local Variable Declaration
+;  (143) Literal
+	iconst_0
+;  (143) End Literal
+	istore_2
+;  (143) End LocalDecl
+L8:
+;  (143) Binary Expression
+;  (143) Name Expression --
+	iload_2
+;  (143) End NameExpr
+;  (143) Invocation
+;  (143) Name Expression --
+	aload_1
+;  (143) End NameExpr
+	invokevirtual java/lang/String/length()I
+;  (143) End Invocation
+	if_icmplt L11
+	iconst_0
+	goto L12
+L11:
+	iconst_1
+L12:
+;  (143) End BinaryExpr
+	ifeq L9
+;  (144) Expression Statement
+;  (144) Assignment
+;  (144) ArrayAccessExpr target
+;  (144) Field Reference
+;  (144) This
+	aload_0
+;  (144) End This
+	getfield BigInt/digits [I
+;  (144) End FieldRef
+;  (144) ArrayAccessExpr index
+;  (144) Name Expression --
+	iload_2
+;  (144) End NameExpr
+;  (144) Invocation
+;  (144) Name Expression --
+;  (144) End NameExpr
+;  (144) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (144) Literal
+	ldc ""
+;  (144) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (144) Invocation
+;  (144) Name Expression --
+	aload_1
+;  (144) End NameExpr
+;  (144) Binary Expression
+;  (144) Binary Expression
+;  (144) Invocation
+;  (144) Name Expression --
+	aload_1
+;  (144) End NameExpr
+	invokevirtual java/lang/String/length()I
+;  (144) End Invocation
+;  (144) Name Expression --
+	iload_2
+;  (144) End NameExpr
+	isub
+;  (144) End BinaryExpr
+;  (144) Literal
+	iconst_1
+;  (144) End Literal
+	isub
+;  (144) End BinaryExpr
+	invokevirtual java/lang/String/charAt(I)C
+;  (144) End Invocation
+	invokevirtual java/lang/StringBuilder/append(C)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (144) End BinaryExpr
+	invokestatic Integer/parseInt(Ljava/lang/String;)I
+;  (144) End Invocation
+	iastore
+;  (144) End Assignment
+;  (144) End ExprStat
+L10:
+;  (143) Expression Statement
+;  (143) Unary Post Expression
+;  (143) Name Expression --
+	iload_2
+;  (143) End NameExpr
+	iinc 2 1
+;  (143) End UnaryPostExpr
+	pop
+;  (143) End ExprStat
+	goto L8
+L9:
+;  (143) End ForStat
+;  (145) Expression Statement
+;  (145) Assignment
+;  (145) This
+	aload_0
+;  (145) End This
+;  (145) Invocation
+;  (145) Name Expression --
+	aload_1
+;  (145) End NameExpr
+	invokevirtual java/lang/String/length()I
+;  (145) End Invocation
+	putfield BigInt/size I
+;  (145) End Assignment
+;  (145) End ExprStat
+	return
+.end method
+
+.method public toString()Ljava/lang/String;
+	.limit stack 50
+	.limit locals 3
+;  (148) Method Declaration (toString)
+;  (149) Local Variable Declaration
+;  (149) Literal
+	ldc ""
+;  (149) End Literal
+	astore_1
+;  (149) End LocalDecl
+;  (150) For Statement
+;  (150) Local Variable Declaration
+;  (150) Literal
+	iconst_0
+;  (150) End Literal
+	istore_2
+;  (150) End LocalDecl
+L13:
+;  (150) Binary Expression
+;  (150) Name Expression --
+	iload_2
+;  (150) End NameExpr
+;  (150) Array length
+;  (150) Field Reference
+;  (150) This
+	aload_0
+;  (150) End This
+	getfield BigInt/digits [I
+;  (150) End FieldRef
+	arraylength
+	if_icmplt L16
+	iconst_0
+	goto L17
+L16:
+	iconst_1
+L17:
+;  (150) End BinaryExpr
+	ifeq L14
+;  (151) Expression Statement
+;  (151) Assignment
+;  (151) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (151) ArrayAccessExpr
+;  (151) Field Reference
+;  (151) This
+	aload_0
+;  (151) End This
+	getfield BigInt/digits [I
+;  (151) End FieldRef
+;  (151) Name Expression --
+	iload_2
+;  (151) End NameExpr
+	iaload
+;  (151) End ArrayAccessExpr
+	invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+;  (151) Name Expression --
+	aload_1
+;  (151) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (151) End BinaryExpr
+	astore_1
+;  (151) End Assignment
+;  (151) End ExprStat
+L15:
+;  (150) Expression Statement
+;  (150) Unary Post Expression
+;  (150) Name Expression --
+	iload_2
+;  (150) End NameExpr
+	iinc 2 1
+;  (150) End UnaryPostExpr
+	pop
+;  (150) End ExprStat
+	goto L13
+L14:
+;  (150) End ForStat
+;  (152) Return Statement
+;  (152) Name Expression --
+	aload_1
+;  (152) End NameExpr
+	areturn
+;  (152) End ReturnStat
+.end method
+
+.method public print()V
+	.limit stack 50
+	.limit locals 3
+;  (155) Method Declaration (print)
+;  (156) Local Variable Declaration
+;  (156) Literal
+	ldc ""
+;  (156) End Literal
+	astore_1
+;  (156) End LocalDecl
+;  (157) For Statement
+;  (157) Local Variable Declaration
+;  (157) Literal
+	iconst_0
+;  (157) End Literal
+	istore_2
+;  (157) End LocalDecl
+L18:
+;  (157) Binary Expression
+;  (157) Name Expression --
+	iload_2
+;  (157) End NameExpr
+;  (157) Array length
+;  (157) Field Reference
+;  (157) This
+	aload_0
+;  (157) End This
+	getfield BigInt/digits [I
+;  (157) End FieldRef
+	arraylength
+	if_icmplt L21
+	iconst_0
+	goto L22
+L21:
+	iconst_1
+L22:
+;  (157) End BinaryExpr
+	ifeq L19
+;  (158) Expression Statement
+;  (158) Assignment
+;  (158) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (158) ArrayAccessExpr
+;  (158) Field Reference
+;  (158) This
+	aload_0
+;  (158) End This
+	getfield BigInt/digits [I
+;  (158) End FieldRef
+;  (158) Name Expression --
+	iload_2
+;  (158) End NameExpr
+	iaload
+;  (158) End ArrayAccessExpr
+	invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+;  (158) Name Expression --
+	aload_1
+;  (158) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (158) End BinaryExpr
+	astore_1
+;  (158) End Assignment
+;  (158) End ExprStat
+L20:
+;  (157) Expression Statement
+;  (157) Unary Post Expression
+;  (157) Name Expression --
+	iload_2
+;  (157) End NameExpr
+	iinc 2 1
+;  (157) End UnaryPostExpr
+	pop
+;  (157) End ExprStat
+	goto L18
+L19:
+;  (157) End ForStat
+;  (159) Expression Statement
+;  (159) Invocation
+;  (159) Field Reference
+;  (159) Name Expression --
+;  (159) End NameExpr
+	getstatic System/out LIo;
+;  (159) End FieldRef
+	pop
+;  (159) Name Expression --
+	aload_1
+;  (159) End NameExpr
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (159) End Invocation
+;  (159) End ExprStat
+	return
+.end method
+
+.method public format()Ljava/lang/String;
+	.limit stack 50
+	.limit locals 4
+;  (162) Method Declaration (format)
+;  (163) Local Variable Declaration
+;  (163) Literal
+	ldc ""
+;  (163) End Literal
+	astore_1
+;  (163) End LocalDecl
+;  (164) Local Variable Declaration
+;  (164) Literal
+	iconst_0
+;  (164) End Literal
+	istore_2
+;  (164) End LocalDecl
+;  (165) For Statement
+;  (165) Local Variable Declaration
+;  (165) Literal
+	iconst_0
+;  (165) End Literal
+	istore_3
+;  (165) End LocalDecl
+L23:
+;  (165) Binary Expression
+;  (165) Name Expression --
+	iload_3
+;  (165) End NameExpr
+;  (165) Array length
+;  (165) Field Reference
+;  (165) This
+	aload_0
+;  (165) End This
+	getfield BigInt/digits [I
+;  (165) End FieldRef
+	arraylength
+	if_icmplt L26
+	iconst_0
+	goto L27
+L26:
+	iconst_1
+L27:
+;  (165) End BinaryExpr
+	ifeq L24
+;  (166) Expression Statement
+;  (166) Assignment
+;  (166) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (166) ArrayAccessExpr
+;  (166) Field Reference
+;  (166) This
+	aload_0
+;  (166) End This
+	getfield BigInt/digits [I
+;  (166) End FieldRef
+;  (166) Name Expression --
+	iload_3
+;  (166) End NameExpr
+	iaload
+;  (166) End ArrayAccessExpr
+	invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+;  (166) Name Expression --
+	aload_1
+;  (166) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (166) End BinaryExpr
+	astore_1
+;  (166) End Assignment
+;  (166) End ExprStat
+;  (167) If Statement
+;  (167) Binary Expression
+;  (167) Binary Expression
+;  (167) Binary Expression
+;  (167) Binary Expression
+;  (167) Name Expression --
+	iload_3
+;  (167) End NameExpr
+;  (167) Literal
+	iconst_1
+;  (167) End Literal
+	iadd
+;  (167) End BinaryExpr
+;  (167) Literal
+	iconst_3
+;  (167) End Literal
+	irem
+;  (167) End BinaryExpr
+;  (167) Literal
+	iconst_0
+;  (167) End Literal
+	if_icmpeq L29
+	iconst_0
+	goto L30
+L29:
+	iconst_1
+L30:
+;  (167) End BinaryExpr
+	dup
+	ifeq L31
+	pop
+;  (167) Binary Expression
+;  (167) Name Expression --
+	iload_3
+;  (167) End NameExpr
+;  (167) Binary Expression
+;  (167) Array length
+;  (167) Field Reference
+;  (167) This
+	aload_0
+;  (167) End This
+	getfield BigInt/digits [I
+;  (167) End FieldRef
+	arraylength
+;  (167) Literal
+	iconst_1
+;  (167) End Literal
+	isub
+;  (167) End BinaryExpr
+	if_icmpne L32
+	iconst_0
+	goto L33
+L32:
+	iconst_1
+L33:
+;  (167) End BinaryExpr
+L31:
+;  (167) End BinaryExpr
+	ifeq L28
+;  (168) Expression Statement
+;  (168) Assignment
+;  (168) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (168) Literal
+	ldc ","
+;  (168) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (168) Name Expression --
+	aload_1
+;  (168) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (168) End BinaryExpr
+	astore_1
+;  (168) End Assignment
+;  (168) End ExprStat
+L28:
+;  (167) End IfStat
+L25:
+;  (165) Expression Statement
+;  (165) Unary Post Expression
+;  (165) Name Expression --
+	iload_3
+;  (165) End NameExpr
+	iinc 3 1
+;  (165) End UnaryPostExpr
+	pop
+;  (165) End ExprStat
+	goto L23
+L24:
+;  (165) End ForStat
+;  (170) Return Statement
+;  (170) Name Expression --
+	aload_1
+;  (170) End NameExpr
+	areturn
+;  (170) End ReturnStat
+.end method
+
+.method private trim()V
+	.limit stack 50
+	.limit locals 5
+;  (173) Method Declaration (trim)
+;  (174) Local Variable Declaration
+;  (174) Literal
+	iconst_0
+;  (174) End Literal
+	istore_1
+;  (174) End LocalDecl
+;  (175) While Statement
+L34:
+;  (175) Binary Expression
+;  (175) Binary Expression
+;  (175) ArrayAccessExpr
+;  (175) Field Reference
+;  (175) This
+	aload_0
+;  (175) End This
+	getfield BigInt/digits [I
+;  (175) End FieldRef
+;  (175) Binary Expression
+;  (175) Binary Expression
+;  (175) Array length
+;  (175) Field Reference
+;  (175) This
+	aload_0
+;  (175) End This
+	getfield BigInt/digits [I
+;  (175) End FieldRef
+	arraylength
+;  (175) Literal
+	iconst_1
+;  (175) End Literal
+	isub
+;  (175) End BinaryExpr
+;  (175) Name Expression --
+	iload_1
+;  (175) End NameExpr
+	isub
+;  (175) End BinaryExpr
+	iaload
+;  (175) End ArrayAccessExpr
+;  (175) Literal
+	iconst_0
+;  (175) End Literal
+	if_icmpeq L36
+	iconst_0
+	goto L37
+L36:
+	iconst_1
+L37:
+;  (175) End BinaryExpr
+	dup
+	ifeq L38
+	pop
+;  (175) Binary Expression
+;  (175) Name Expression --
+	iload_1
+;  (175) End NameExpr
+;  (175) Binary Expression
+;  (175) Array length
+;  (175) Field Reference
+;  (175) This
+	aload_0
+;  (175) End This
+	getfield BigInt/digits [I
+;  (175) End FieldRef
+	arraylength
+;  (175) Literal
+	iconst_1
+;  (175) End Literal
+	isub
+;  (175) End BinaryExpr
+	if_icmplt L39
+	iconst_0
+	goto L40
+L39:
+	iconst_1
+L40:
+;  (175) End BinaryExpr
+L38:
+;  (175) End BinaryExpr
+	ifeq L35
+;  (176) Expression Statement
+;  (176) Unary Post Expression
+;  (176) Name Expression --
+	iload_1
+;  (176) End NameExpr
+	iinc 1 1
+;  (176) End UnaryPostExpr
+	pop
+;  (176) End ExprStat
+	goto L34
+L35:
+;  (175) End WhileStat
+;  (177) Local Variable Declaration
+;  (177) Binary Expression
+;  (177) Array length
+;  (177) Field Reference
+;  (177) This
+	aload_0
+;  (177) End This
+	getfield BigInt/digits [I
+;  (177) End FieldRef
+	arraylength
+;  (177) Name Expression --
+	iload_1
+;  (177) End NameExpr
+	isub
+;  (177) End BinaryExpr
+	istore_2
+;  (177) End LocalDecl
+;  (178) Local Variable Declaration
+;  (178) NewArray
+;  (178) Name Expression --
+	iload_2
+;  (178) End NameExpr
+	newarray int
+;  (178) End NewArray
+	astore_3
+;  (178) End LocalDecl
+;  (179) For Statement
+;  (179) Local Variable Declaration
+;  (179) Literal
+	iconst_0
+;  (179) End Literal
+	istore 4
+;  (179) End LocalDecl
+L41:
+;  (179) Binary Expression
+;  (179) Name Expression --
+	iload 4
+;  (179) End NameExpr
+;  (179) Name Expression --
+	iload_2
+;  (179) End NameExpr
+	if_icmplt L44
+	iconst_0
+	goto L45
+L44:
+	iconst_1
+L45:
+;  (179) End BinaryExpr
+	ifeq L42
+;  (180) Expression Statement
+;  (180) Assignment
+;  (180) ArrayAccessExpr target
+;  (180) Name Expression --
+	aload_3
+;  (180) End NameExpr
+;  (180) ArrayAccessExpr index
+;  (180) Name Expression --
+	iload 4
+;  (180) End NameExpr
+;  (180) ArrayAccessExpr
+;  (180) Field Reference
+;  (180) This
+	aload_0
+;  (180) End This
+	getfield BigInt/digits [I
+;  (180) End FieldRef
+;  (180) Name Expression --
+	iload 4
+;  (180) End NameExpr
+	iaload
+;  (180) End ArrayAccessExpr
+	iastore
+;  (180) End Assignment
+;  (180) End ExprStat
+L43:
+;  (179) Expression Statement
+;  (179) Unary Post Expression
+;  (179) Name Expression --
+	iload 4
+;  (179) End NameExpr
+	iinc 4 1
+;  (179) End UnaryPostExpr
+	pop
+;  (179) End ExprStat
+	goto L41
+L42:
+;  (179) End ForStat
+;  (181) Expression Statement
+;  (181) Assignment
+;  (181) This
+	aload_0
+;  (181) End This
+;  (181) Name Expression --
+	aload_3
+;  (181) End NameExpr
+	putfield BigInt/digits [I
+;  (181) End Assignment
+;  (181) End ExprStat
+;  (182) Expression Statement
+;  (182) Assignment
+;  (182) This
+	aload_0
+;  (182) End This
+;  (182) Array length
+;  (182) Field Reference
+;  (182) This
+	aload_0
+;  (182) End This
+	getfield BigInt/digits [I
+;  (182) End FieldRef
+	arraylength
+	putfield BigInt/size I
+;  (182) End Assignment
+;  (182) End ExprStat
+	return
+.end method
+
+.method public digitAt(I)I
+	.limit stack 50
+	.limit locals 2
+;  (185) Method Declaration (digitAt)
+;  (186) Return Statement
+;  (186) ArrayAccessExpr
+;  (186) Field Reference
+;  (186) This
+	aload_0
+;  (186) End This
+	getfield BigInt/digits [I
+;  (186) End FieldRef
+;  (186) Name Expression --
+	iload_1
+;  (186) End NameExpr
+	iaload
+;  (186) End ArrayAccessExpr
+	ireturn
+;  (186) End ReturnStat
+.end method
+
+.method public setDigitAt(II)V
+	.limit stack 50
+	.limit locals 3
+;  (189) Method Declaration (setDigitAt)
+;  (190) Expression Statement
+;  (190) Assignment
+;  (190) ArrayAccessExpr target
+;  (190) Field Reference
+;  (190) This
+	aload_0
+;  (190) End This
+	getfield BigInt/digits [I
+;  (190) End FieldRef
+;  (190) ArrayAccessExpr index
+;  (190) Name Expression --
+	iload_1
+;  (190) End NameExpr
+;  (190) Name Expression --
+	iload_2
+;  (190) End NameExpr
+	iastore
+;  (190) End Assignment
+;  (190) End ExprStat
+	return
+.end method
+
+.method public size()I
+	.limit stack 50
+	.limit locals 1
+;  (193) Method Declaration (size)
+;  (194) Return Statement
+;  (194) Field Reference
+;  (194) This
+	aload_0
+;  (194) End This
+	getfield BigInt/size I
+;  (194) End FieldRef
+	ireturn
+;  (194) End ReturnStat
+.end method
+
+.method public <init>(LBigInt;I)V
+	.limit stack 50
+	.limit locals 4
+;  (198) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (198) Field Init Generation Start
+	aload_0
+;  (122) Literal
+	iconst_0
+;  (122) End Literal
+	putfield BigInt/negative Z
+;  (198) Field Init Generation End
+;  (199) Expression Statement
+;  (199) Assignment
+;  (199) This
+	aload_0
+;  (199) End This
+;  (199) NewArray
+;  (199) Name Expression --
+	iload_2
+;  (199) End NameExpr
+	newarray int
+;  (199) End NewArray
+	putfield BigInt/digits [I
+;  (199) End Assignment
+;  (199) End ExprStat
+;  (200) For Statement
+;  (200) Local Variable Declaration
+;  (200) Literal
+	iconst_0
+;  (200) End Literal
+	istore_3
+;  (200) End LocalDecl
+L46:
+;  (200) Binary Expression
+;  (200) Name Expression --
+	iload_3
+;  (200) End NameExpr
+;  (200) Name Expression --
+	iload_2
+;  (200) End NameExpr
+	if_icmplt L49
+	iconst_0
+	goto L50
+L49:
+	iconst_1
+L50:
+;  (200) End BinaryExpr
+	ifeq L47
+;  (201) If Statement
+;  (201) Binary Expression
+;  (201) Name Expression --
+	iload_3
+;  (201) End NameExpr
+;  (201) Invocation
+;  (201) Name Expression --
+	aload_1
+;  (201) End NameExpr
+	invokevirtual BigInt/size()I
+;  (201) End Invocation
+	if_icmplt L53
+	iconst_0
+	goto L54
+L53:
+	iconst_1
+L54:
+;  (201) End BinaryExpr
+	ifeq L51
+;  (202) Expression Statement
+;  (202) Assignment
+;  (202) ArrayAccessExpr target
+;  (202) Field Reference
+;  (202) This
+	aload_0
+;  (202) End This
+	getfield BigInt/digits [I
+;  (202) End FieldRef
+;  (202) ArrayAccessExpr index
+;  (202) Name Expression --
+	iload_3
+;  (202) End NameExpr
+;  (202) Invocation
+;  (202) Name Expression --
+	aload_1
+;  (202) End NameExpr
+;  (202) Name Expression --
+	iload_3
+;  (202) End NameExpr
+	invokevirtual BigInt/digitAt(I)I
+;  (202) End Invocation
+	iastore
+;  (202) End Assignment
+;  (202) End ExprStat
+	goto L52
+L51:
+;  (204) Expression Statement
+;  (204) Assignment
+;  (204) ArrayAccessExpr target
+;  (204) Field Reference
+;  (204) This
+	aload_0
+;  (204) End This
+	getfield BigInt/digits [I
+;  (204) End FieldRef
+;  (204) ArrayAccessExpr index
+;  (204) Name Expression --
+	iload_3
+;  (204) End NameExpr
+;  (204) Literal
+	iconst_0
+;  (204) End Literal
+	iastore
+;  (204) End Assignment
+;  (204) End ExprStat
+L52:
+;  (201) End IfStat
+L48:
+;  (200) Expression Statement
+;  (200) Unary Post Expression
+;  (200) Name Expression --
+	iload_3
+;  (200) End NameExpr
+	iinc 3 1
+;  (200) End UnaryPostExpr
+	pop
+;  (200) End ExprStat
+	goto L46
+L47:
+;  (200) End ForStat
+;  (205) Expression Statement
+;  (205) Assignment
+;  (205) This
+	aload_0
+;  (205) End This
+;  (205) Name Expression --
+	iload_2
+;  (205) End NameExpr
+	putfield BigInt/size I
+;  (205) End Assignment
+;  (205) End ExprStat
+	return
+.end method
+
+.method private min(II)I
+	.limit stack 50
+	.limit locals 3
+;  (208) Method Declaration (min)
+;  (209) Return Statement
+;  (209) Ternary Statement
+;  (209) Binary Expression
+;  (209) Name Expression --
+	iload_1
+;  (209) End NameExpr
+;  (209) Name Expression --
+	iload_2
+;  (209) End NameExpr
+	if_icmplt L57
+	iconst_0
+	goto L58
+L57:
+	iconst_1
+L58:
+;  (209) End BinaryExpr
+	ifeq L55
+;  (209) Name Expression --
+	iload_1
+;  (209) End NameExpr
+	goto L56
+L55:
+;  (209) Name Expression --
+	iload_2
+;  (209) End NameExpr
+L56:
+;  (209) Ternary
+	ireturn
+;  (209) End ReturnStat
+.end method
+
+.method private max(II)I
+	.limit stack 50
+	.limit locals 3
+;  (211) Method Declaration (max)
+;  (212) Return Statement
+;  (212) Ternary Statement
+;  (212) Binary Expression
+;  (212) Name Expression --
+	iload_1
+;  (212) End NameExpr
+;  (212) Name Expression --
+	iload_2
+;  (212) End NameExpr
+	if_icmpgt L61
+	iconst_0
+	goto L62
+L61:
+	iconst_1
+L62:
+;  (212) End BinaryExpr
+	ifeq L59
+;  (212) Name Expression --
+	iload_1
+;  (212) End NameExpr
+	goto L60
+L59:
+;  (212) Name Expression --
+	iload_2
+;  (212) End NameExpr
+L60:
+;  (212) Ternary
+	ireturn
+;  (212) End ReturnStat
+.end method
+
+.method public pad(I)LBigInt;
+	.limit stack 50
+	.limit locals 5
+;  (215) Method Declaration (pad)
+;  (216) Local Variable Declaration
+;  (216) New
+	new BigInt
+	dup
+;  (216) New
+	new BigInt
+	dup
+;  (216) Literal
+	ldc "0"
+;  (216) End Literal
+	invokespecial BigInt/<init>(Ljava/lang/String;)V
+;  (216) End New
+;  (216) Binary Expression
+;  (216) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (216) End Invocation
+;  (216) Name Expression --
+	iload_1
+;  (216) End NameExpr
+	iadd
+;  (216) End BinaryExpr
+	invokespecial BigInt/<init>(LBigInt;I)V
+;  (216) End New
+	astore_2
+;  (216) End LocalDecl
+;  (217) For Statement
+;  (217) Local Variable Declaration
+;  (217) Literal
+	iconst_0
+;  (217) End Literal
+	istore_3
+;  (217) End LocalDecl
+L63:
+;  (217) Binary Expression
+;  (217) Name Expression --
+	iload_3
+;  (217) End NameExpr
+;  (217) Name Expression --
+	iload_1
+;  (217) End NameExpr
+	if_icmplt L66
+	iconst_0
+	goto L67
+L66:
+	iconst_1
+L67:
+;  (217) End BinaryExpr
+	ifeq L64
+;  (218) Expression Statement
+;  (218) Invocation
+;  (218) Name Expression --
+	aload_2
+;  (218) End NameExpr
+;  (218) Name Expression --
+	iload_3
+;  (218) End NameExpr
+;  (218) Literal
+	iconst_0
+;  (218) End Literal
+	invokevirtual BigInt/setDigitAt(II)V
+;  (218) End Invocation
+;  (218) End ExprStat
+L65:
+;  (217) Expression Statement
+;  (217) Unary Post Expression
+;  (217) Name Expression --
+	iload_3
+;  (217) End NameExpr
+	iinc 3 1
+;  (217) End UnaryPostExpr
+	pop
+;  (217) End ExprStat
+	goto L63
+L64:
+;  (217) End ForStat
+;  (219) For Statement
+;  (219) Local Variable Declaration
+;  (219) Literal
+	iconst_0
+;  (219) End Literal
+	istore 4
+;  (219) End LocalDecl
+L68:
+;  (219) Binary Expression
+;  (219) Name Expression --
+	iload 4
+;  (219) End NameExpr
+;  (219) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (219) End Invocation
+	if_icmplt L71
+	iconst_0
+	goto L72
+L71:
+	iconst_1
+L72:
+;  (219) End BinaryExpr
+	ifeq L69
+;  (220) Expression Statement
+;  (220) Invocation
+;  (220) Name Expression --
+	aload_2
+;  (220) End NameExpr
+;  (220) Binary Expression
+;  (220) Name Expression --
+	iload 4
+;  (220) End NameExpr
+;  (220) Name Expression --
+	iload_1
+;  (220) End NameExpr
+	iadd
+;  (220) End BinaryExpr
+;  (220) ArrayAccessExpr
+;  (220) Field Reference
+;  (220) This
+	aload_0
+;  (220) End This
+	getfield BigInt/digits [I
+;  (220) End FieldRef
+;  (220) Name Expression --
+	iload 4
+;  (220) End NameExpr
+	iaload
+;  (220) End ArrayAccessExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (220) End Invocation
+;  (220) End ExprStat
+L70:
+;  (219) Expression Statement
+;  (219) Unary Post Expression
+;  (219) Name Expression --
+	iload 4
+;  (219) End NameExpr
+	iinc 4 1
+;  (219) End UnaryPostExpr
+	pop
+;  (219) End ExprStat
+	goto L68
+L69:
+;  (219) End ForStat
+;  (221) Expression Statement
+;  (221) Invocation
+;  (221) Name Expression --
+	aload_2
+;  (221) End NameExpr
+	invokevirtual BigInt/trim()V
+;  (221) End Invocation
+;  (221) End ExprStat
+;  (222) Return Statement
+;  (222) Name Expression --
+	aload_2
+;  (222) End NameExpr
+	areturn
+;  (222) End ReturnStat
+.end method
+
+.method public multiplyByDigit(I)LBigInt;
+	.limit stack 50
+	.limit locals 6
+;  (225) Method Declaration (multiplyByDigit)
+;  (226) Local Variable Declaration
+;  (226) New
+	new BigInt
+	dup
+;  (226) New
+	new BigInt
+	dup
+;  (226) Literal
+	ldc "0"
+;  (226) End Literal
+	invokespecial BigInt/<init>(Ljava/lang/String;)V
+;  (226) End New
+;  (226) Binary Expression
+;  (226) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (226) End Invocation
+;  (226) Literal
+	iconst_1
+;  (226) End Literal
+	iadd
+;  (226) End BinaryExpr
+	invokespecial BigInt/<init>(LBigInt;I)V
+;  (226) End New
+	astore_2
+;  (226) End LocalDecl
+;  (227) Local Variable Declaration
+;  (227) Literal
+	iconst_0
+;  (227) End Literal
+	istore_3
+;  (227) End LocalDecl
+;  (228) Local Variable Declaration
+;  (228) Literal
+	iconst_0
+;  (228) End Literal
+	istore 4
+;  (228) End LocalDecl
+;  (229) For Statement
+;  (229) Expression Statement
+;  (229) Assignment
+;  (229) Literal
+	iconst_0
+;  (229) End Literal
+	istore 4
+;  (229) End Assignment
+;  (229) End ExprStat
+L73:
+;  (229) Binary Expression
+;  (229) Name Expression --
+	iload 4
+;  (229) End NameExpr
+;  (229) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (229) End Invocation
+	if_icmplt L76
+	iconst_0
+	goto L77
+L76:
+	iconst_1
+L77:
+;  (229) End BinaryExpr
+	ifeq L74
+;  (230) Local Variable Declaration
+;  (230) Binary Expression
+;  (230) Binary Expression
+;  (230) Name Expression --
+	iload_1
+;  (230) End NameExpr
+;  (230) ArrayAccessExpr
+;  (230) Field Reference
+;  (230) This
+	aload_0
+;  (230) End This
+	getfield BigInt/digits [I
+;  (230) End FieldRef
+;  (230) Name Expression --
+	iload 4
+;  (230) End NameExpr
+	iaload
+;  (230) End ArrayAccessExpr
+	imul
+;  (230) End BinaryExpr
+;  (230) Name Expression --
+	iload_3
+;  (230) End NameExpr
+	iadd
+;  (230) End BinaryExpr
+	istore 5
+;  (230) End LocalDecl
+;  (231) If Statement
+;  (231) Binary Expression
+;  (231) Name Expression --
+	iload 5
+;  (231) End NameExpr
+;  (231) Literal
+	bipush 10
+;  (231) End Literal
+	if_icmpgt L80
+	iconst_0
+	goto L81
+L80:
+	iconst_1
+L81:
+;  (231) End BinaryExpr
+	ifeq L78
+;  (232) Expression Statement
+;  (232) Assignment
+;  (232) Binary Expression
+;  (232) Name Expression --
+	iload 5
+;  (232) End NameExpr
+;  (232) Literal
+	bipush 10
+;  (232) End Literal
+	idiv
+;  (232) End BinaryExpr
+	istore_3
+;  (232) End Assignment
+;  (232) End ExprStat
+;  (233) Expression Statement
+;  (233) Assignment
+;  (233) Binary Expression
+;  (233) Name Expression --
+	iload 5
+;  (233) End NameExpr
+;  (233) Literal
+	bipush 10
+;  (233) End Literal
+	irem
+;  (233) End BinaryExpr
+	istore 5
+;  (233) End Assignment
+;  (233) End ExprStat
+	goto L79
+L78:
+;  (235) Expression Statement
+;  (235) Assignment
+;  (235) Literal
+	iconst_0
+;  (235) End Literal
+	istore_3
+;  (235) End Assignment
+;  (235) End ExprStat
+L79:
+;  (231) End IfStat
+;  (236) Expression Statement
+;  (236) Invocation
+;  (236) Name Expression --
+	aload_2
+;  (236) End NameExpr
+;  (236) Name Expression --
+	iload 4
+;  (236) End NameExpr
+;  (236) Name Expression --
+	iload 5
+;  (236) End NameExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (236) End Invocation
+;  (236) End ExprStat
+L75:
+;  (229) Expression Statement
+;  (229) Unary Post Expression
+;  (229) Name Expression --
+	iload 4
+;  (229) End NameExpr
+	iinc 4 1
+;  (229) End UnaryPostExpr
+	pop
+;  (229) End ExprStat
+	goto L73
+L74:
+;  (229) End ForStat
+;  (238) Expression Statement
+;  (238) Invocation
+;  (238) Name Expression --
+	aload_2
+;  (238) End NameExpr
+;  (238) Name Expression --
+	iload 4
+;  (238) End NameExpr
+;  (238) Name Expression --
+	iload_3
+;  (238) End NameExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (238) End Invocation
+;  (238) End ExprStat
+;  (239) Expression Statement
+;  (239) Invocation
+;  (239) Name Expression --
+	aload_2
+;  (239) End NameExpr
+	invokevirtual BigInt/trim()V
+;  (239) End Invocation
+;  (239) End ExprStat
+;  (240) Return Statement
+;  (240) Name Expression --
+	aload_2
+;  (240) End NameExpr
+	areturn
+;  (240) End ReturnStat
+.end method
+
+.method public multiply(LBigInt;)LBigInt;
+	.limit stack 50
+	.limit locals 5
+;  (243) Method Declaration (multiply)
+;  (244) Local Variable Declaration
+;  (244) New
+	new BigInt
+	dup
+;  (244) New
+	new BigInt
+	dup
+;  (244) Literal
+	ldc "0"
+;  (244) End Literal
+	invokespecial BigInt/<init>(Ljava/lang/String;)V
+;  (244) End New
+;  (244) Binary Expression
+;  (244) Binary Expression
+;  (244) Invocation
+;  (244) Name Expression --
+	aload_1
+;  (244) End NameExpr
+	invokevirtual BigInt/size()I
+;  (244) End Invocation
+;  (244) Field Reference
+;  (244) This
+	aload_0
+;  (244) End This
+	getfield BigInt/size I
+;  (244) End FieldRef
+	imul
+;  (244) End BinaryExpr
+;  (244) Literal
+	iconst_1
+;  (244) End Literal
+	isub
+;  (244) End BinaryExpr
+	invokespecial BigInt/<init>(LBigInt;I)V
+;  (244) End New
+	astore_2
+;  (244) End LocalDecl
+;  (245) Local Variable Declaration
+;  (245) Literal
+	aconst_null
+;  (245) End Literal
+	astore_3
+;  (245) End LocalDecl
+;  (246) For Statement
+;  (246) Local Variable Declaration
+;  (246) Literal
+	iconst_0
+;  (246) End Literal
+	istore 4
+;  (246) End LocalDecl
+L82:
+;  (246) Binary Expression
+;  (246) Name Expression --
+	iload 4
+;  (246) End NameExpr
+;  (246) Invocation
+;  (246) Name Expression --
+	aload_1
+;  (246) End NameExpr
+	invokevirtual BigInt/size()I
+;  (246) End Invocation
+	if_icmplt L85
+	iconst_0
+	goto L86
+L85:
+	iconst_1
+L86:
+;  (246) End BinaryExpr
+	ifeq L83
+;  (247) Expression Statement
+;  (247) Assignment
+;  (247) Invocation
+;  (247) This
+	aload_0
+;  (247) End This
+;  (247) Invocation
+;  (247) Name Expression --
+	aload_1
+;  (247) End NameExpr
+;  (247) Name Expression --
+	iload 4
+;  (247) End NameExpr
+	invokevirtual BigInt/digitAt(I)I
+;  (247) End Invocation
+	invokevirtual BigInt/multiplyByDigit(I)LBigInt;
+;  (247) End Invocation
+	astore_3
+;  (247) End Assignment
+;  (247) End ExprStat
+;  (248) Expression Statement
+;  (248) Assignment
+;  (248) Invocation
+;  (248) Name Expression --
+	aload_3
+;  (248) End NameExpr
+;  (248) Name Expression --
+	iload 4
+;  (248) End NameExpr
+	invokevirtual BigInt/pad(I)LBigInt;
+;  (248) End Invocation
+	astore_3
+;  (248) End Assignment
+;  (248) End ExprStat
+;  (249) Expression Statement
+;  (249) Assignment
+;  (249) Invocation
+;  (249) Name Expression --
+	aload_2
+;  (249) End NameExpr
+;  (249) Name Expression --
+	aload_3
+;  (249) End NameExpr
+	invokevirtual BigInt/add(LBigInt;)LBigInt;
+;  (249) End Invocation
+	astore_2
+;  (249) End Assignment
+;  (249) End ExprStat
+L84:
+;  (246) Expression Statement
+;  (246) Unary Post Expression
+;  (246) Name Expression --
+	iload 4
+;  (246) End NameExpr
+	iinc 4 1
+;  (246) End UnaryPostExpr
+	pop
+;  (246) End ExprStat
+	goto L82
+L83:
+;  (246) End ForStat
+;  (251) Expression Statement
+;  (251) Invocation
+;  (251) Name Expression --
+	aload_2
+;  (251) End NameExpr
+	invokevirtual BigInt/trim()V
+;  (251) End Invocation
+;  (251) End ExprStat
+;  (252) Return Statement
+;  (252) Name Expression --
+	aload_2
+;  (252) End NameExpr
+	areturn
+;  (252) End ReturnStat
+.end method
+
+.method public add(LBigInt;)LBigInt;
+	.limit stack 50
+	.limit locals 8
+;  (255) Method Declaration (add)
+;  (256) Local Variable Declaration
+;  (256) New
+	new BigInt
+	dup
+;  (256) Name Expression --
+	aload_1
+;  (256) End NameExpr
+;  (256) Binary Expression
+;  (256) Invocation
+	aload_0
+;  (256) Invocation
+;  (256) Name Expression --
+	aload_1
+;  (256) End NameExpr
+	invokevirtual BigInt/size()I
+;  (256) End Invocation
+;  (256) Field Reference
+;  (256) This
+	aload_0
+;  (256) End This
+	getfield BigInt/size I
+;  (256) End FieldRef
+	invokevirtual BigInt/max(II)I
+;  (256) End Invocation
+;  (256) Literal
+	iconst_1
+;  (256) End Literal
+	iadd
+;  (256) End BinaryExpr
+	invokespecial BigInt/<init>(LBigInt;I)V
+;  (256) End New
+	astore_2
+;  (256) End LocalDecl
+;  (257) Local Variable Declaration
+;  (257) Literal
+	iconst_0
+;  (257) End Literal
+	istore_3
+;  (257) End LocalDecl
+;  (258) Local Variable Declaration
+;  (258) Literal
+	iconst_0
+;  (258) End Literal
+	istore 4
+;  (258) End LocalDecl
+;  (260) For Statement
+;  (260) Expression Statement
+;  (260) Assignment
+;  (260) Literal
+	iconst_0
+;  (260) End Literal
+	istore 5
+;  (260) End Assignment
+;  (260) End ExprStat
+L87:
+;  (260) Binary Expression
+;  (260) Name Expression --
+	iload 5
+;  (260) End NameExpr
+;  (260) Invocation
+	aload_0
+;  (260) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (260) End Invocation
+;  (260) Invocation
+;  (260) Name Expression --
+	aload_1
+;  (260) End NameExpr
+	invokevirtual BigInt/size()I
+;  (260) End Invocation
+	invokevirtual BigInt/min(II)I
+;  (260) End Invocation
+	if_icmplt L90
+	iconst_0
+	goto L91
+L90:
+	iconst_1
+L91:
+;  (260) End BinaryExpr
+	ifeq L88
+;  (261) Expression Statement
+;  (261) Assignment
+;  (261) Binary Expression
+;  (261) Binary Expression
+;  (261) ArrayAccessExpr
+;  (261) Field Reference
+;  (261) This
+	aload_0
+;  (261) End This
+	getfield BigInt/digits [I
+;  (261) End FieldRef
+;  (261) Name Expression --
+	iload 5
+;  (261) End NameExpr
+	iaload
+;  (261) End ArrayAccessExpr
+;  (261) Invocation
+;  (261) Name Expression --
+	aload_1
+;  (261) End NameExpr
+;  (261) Name Expression --
+	iload 5
+;  (261) End NameExpr
+	invokevirtual BigInt/digitAt(I)I
+;  (261) End Invocation
+	iadd
+;  (261) End BinaryExpr
+;  (261) Name Expression --
+	iload_3
+;  (261) End NameExpr
+	iadd
+;  (261) End BinaryExpr
+	istore 4
+;  (261) End Assignment
+;  (261) End ExprStat
+;  (263) If Statement
+;  (263) Binary Expression
+;  (263) Name Expression --
+	iload 4
+;  (263) End NameExpr
+;  (263) Literal
+	bipush 9
+;  (263) End Literal
+	if_icmpgt L94
+	iconst_0
+	goto L95
+L94:
+	iconst_1
+L95:
+;  (263) End BinaryExpr
+	ifeq L92
+;  (264) Expression Statement
+;  (264) Assignment
+;  (264) Binary Expression
+;  (264) Name Expression --
+	iload 4
+;  (264) End NameExpr
+;  (264) Literal
+	bipush 10
+;  (264) End Literal
+	isub
+;  (264) End BinaryExpr
+	istore 4
+;  (264) End Assignment
+;  (264) End ExprStat
+;  (265) Expression Statement
+;  (265) Assignment
+;  (265) Literal
+	iconst_1
+;  (265) End Literal
+	istore_3
+;  (265) End Assignment
+;  (265) End ExprStat
+	goto L93
+L92:
+;  (267) Expression Statement
+;  (267) Assignment
+;  (267) Literal
+	iconst_0
+;  (267) End Literal
+	istore_3
+;  (267) End Assignment
+;  (267) End ExprStat
+L93:
+;  (263) End IfStat
+;  (268) Expression Statement
+;  (268) Invocation
+;  (268) Name Expression --
+	aload_2
+;  (268) End NameExpr
+;  (268) Name Expression --
+	iload 5
+;  (268) End NameExpr
+;  (268) Name Expression --
+	iload 4
+;  (268) End NameExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (268) End Invocation
+;  (268) End ExprStat
+L89:
+;  (260) Expression Statement
+;  (260) Unary Post Expression
+;  (260) Name Expression --
+	iload 5
+;  (260) End NameExpr
+	iinc 5 1
+;  (260) End UnaryPostExpr
+	pop
+;  (260) End ExprStat
+	goto L87
+L88:
+;  (260) End ForStat
+;  (270) For Statement
+;  (270) Local Variable Declaration
+;  (270) Name Expression --
+	iload 5
+;  (270) End NameExpr
+	istore 6
+;  (270) End LocalDecl
+L96:
+;  (270) Binary Expression
+;  (270) Name Expression --
+	iload 6
+;  (270) End NameExpr
+;  (270) Invocation
+	aload_0
+	invokevirtual BigInt/size()I
+;  (270) End Invocation
+	if_icmplt L99
+	iconst_0
+	goto L100
+L99:
+	iconst_1
+L100:
+;  (270) End BinaryExpr
+	ifeq L97
+;  (271) Expression Statement
+;  (271) Assignment
+;  (271) Binary Expression
+;  (271) ArrayAccessExpr
+;  (271) Field Reference
+;  (271) This
+	aload_0
+;  (271) End This
+	getfield BigInt/digits [I
+;  (271) End FieldRef
+;  (271) Name Expression --
+	iload 6
+;  (271) End NameExpr
+	iaload
+;  (271) End ArrayAccessExpr
+;  (271) Name Expression --
+	iload_3
+;  (271) End NameExpr
+	iadd
+;  (271) End BinaryExpr
+	istore 4
+;  (271) End Assignment
+;  (271) End ExprStat
+;  (272) If Statement
+;  (272) Binary Expression
+;  (272) Name Expression --
+	iload 4
+;  (272) End NameExpr
+;  (272) Literal
+	bipush 9
+;  (272) End Literal
+	if_icmpgt L103
+	iconst_0
+	goto L104
+L103:
+	iconst_1
+L104:
+;  (272) End BinaryExpr
+	ifeq L101
+;  (273) Expression Statement
+;  (273) Assignment
+;  (273) Binary Expression
+;  (273) Name Expression --
+	iload 4
+;  (273) End NameExpr
+;  (273) Literal
+	bipush 10
+;  (273) End Literal
+	isub
+;  (273) End BinaryExpr
+	istore 4
+;  (273) End Assignment
+;  (273) End ExprStat
+;  (274) Expression Statement
+;  (274) Assignment
+;  (274) Literal
+	iconst_1
+;  (274) End Literal
+	istore_3
+;  (274) End Assignment
+;  (274) End ExprStat
+	goto L102
+L101:
+;  (276) Expression Statement
+;  (276) Assignment
+;  (276) Literal
+	iconst_0
+;  (276) End Literal
+	istore_3
+;  (276) End Assignment
+;  (276) End ExprStat
+L102:
+;  (272) End IfStat
+;  (277) Expression Statement
+;  (277) Invocation
+;  (277) Name Expression --
+	aload_2
+;  (277) End NameExpr
+;  (277) Name Expression --
+	iload 6
+;  (277) End NameExpr
+;  (277) Name Expression --
+	iload 4
+;  (277) End NameExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (277) End Invocation
+;  (277) End ExprStat
+L98:
+;  (270) Expression Statement
+;  (270) Unary Post Expression
+;  (270) Name Expression --
+	iload 6
+;  (270) End NameExpr
+	iinc 6 1
+;  (270) End UnaryPostExpr
+	pop
+;  (270) End ExprStat
+	goto L96
+L97:
+;  (270) End ForStat
+;  (279) For Statement
+;  (279) Local Variable Declaration
+;  (279) Name Expression --
+	iload 5
+;  (279) End NameExpr
+	istore 7
+;  (279) End LocalDecl
+L105:
+;  (279) Binary Expression
+;  (279) Name Expression --
+	iload 7
+;  (279) End NameExpr
+;  (279) Invocation
+;  (279) Name Expression --
+	aload_1
+;  (279) End NameExpr
+	invokevirtual BigInt/size()I
+;  (279) End Invocation
+	if_icmplt L108
+	iconst_0
+	goto L109
+L108:
+	iconst_1
+L109:
+;  (279) End BinaryExpr
+	ifeq L106
+;  (280) Expression Statement
+;  (280) Assignment
+;  (280) Binary Expression
+;  (280) Invocation
+;  (280) Name Expression --
+	aload_1
+;  (280) End NameExpr
+;  (280) Name Expression --
+	iload 7
+;  (280) End NameExpr
+	invokevirtual BigInt/digitAt(I)I
+;  (280) End Invocation
+;  (280) Name Expression --
+	iload_3
+;  (280) End NameExpr
+	iadd
+;  (280) End BinaryExpr
+	istore 4
+;  (280) End Assignment
+;  (280) End ExprStat
+;  (281) If Statement
+;  (281) Binary Expression
+;  (281) Name Expression --
+	iload 4
+;  (281) End NameExpr
+;  (281) Literal
+	bipush 9
+;  (281) End Literal
+	if_icmpgt L112
+	iconst_0
+	goto L113
+L112:
+	iconst_1
+L113:
+;  (281) End BinaryExpr
+	ifeq L110
+;  (282) Expression Statement
+;  (282) Assignment
+;  (282) Binary Expression
+;  (282) Name Expression --
+	iload 4
+;  (282) End NameExpr
+;  (282) Literal
+	bipush 10
+;  (282) End Literal
+	isub
+;  (282) End BinaryExpr
+	istore 4
+;  (282) End Assignment
+;  (282) End ExprStat
+;  (283) Expression Statement
+;  (283) Assignment
+;  (283) Literal
+	iconst_1
+;  (283) End Literal
+	istore_3
+;  (283) End Assignment
+;  (283) End ExprStat
+	goto L111
+L110:
+;  (285) Expression Statement
+;  (285) Assignment
+;  (285) Literal
+	iconst_0
+;  (285) End Literal
+	istore_3
+;  (285) End Assignment
+;  (285) End ExprStat
+L111:
+;  (281) End IfStat
+;  (286) Expression Statement
+;  (286) Invocation
+;  (286) Name Expression --
+	aload_2
+;  (286) End NameExpr
+;  (286) Name Expression --
+	iload 7
+;  (286) End NameExpr
+;  (286) Name Expression --
+	iload 4
+;  (286) End NameExpr
+	invokevirtual BigInt/setDigitAt(II)V
+;  (286) End Invocation
+;  (286) End ExprStat
+L107:
+;  (279) Expression Statement
+;  (279) Unary Post Expression
+;  (279) Name Expression --
+	iload 7
+;  (279) End NameExpr
+	iinc 7 1
+;  (279) End UnaryPostExpr
+	pop
+;  (279) End ExprStat
+	goto L105
+L106:
+;  (279) End ForStat
+;  (288) If Statement
+;  (288) Binary Expression
+;  (288) Name Expression --
+	iload_3
+;  (288) End NameExpr
+;  (288) Literal
+	iconst_1
+;  (288) End Literal
+	if_icmpeq L115
+	iconst_0
+	goto L116
+L115:
+	iconst_1
+L116:
+;  (288) End BinaryExpr
+	ifeq L114
+;  (289) Expression Statement
+;  (289) Invocation
+;  (289) Name Expression --
+	aload_2
+;  (289) End NameExpr
+;  (289) Binary Expression
+;  (289) Invocation
+;  (289) Name Expression --
+	aload_2
+;  (289) End NameExpr
+	invokevirtual BigInt/size()I
+;  (289) End Invocation
+;  (289) Literal
+	iconst_1
+;  (289) End Literal
+	isub
+;  (289) End BinaryExpr
+;  (289) Literal
+	iconst_1
+;  (289) End Literal
+	invokevirtual BigInt/setDigitAt(II)V
+;  (289) End Invocation
+;  (289) End ExprStat
+L114:
+;  (288) End IfStat
+;  (290) Expression Statement
+;  (290) Invocation
+;  (290) Name Expression --
+	aload_2
+;  (290) End NameExpr
+	invokevirtual BigInt/trim()V
+;  (290) End Invocation
+;  (290) End ExprStat
+;  (291) Return Statement
+;  (291) Name Expression --
+	aload_2
+;  (291) End NameExpr
+	areturn
+;  (291) End ReturnStat
+.end method
+

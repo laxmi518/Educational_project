@@ -1,0 +1,19 @@
+.interface public abstract  MyList
+.super java/lang/Object
+
+.method public abstract size()I
+;  (143) Method Declaration (size)
+.end method
+
+.method public abstract get(I)LMyObject;
+;  (144) Method Declaration (get)
+.end method
+
+.method public abstract set(ILMyObject;)V
+;  (145) Method Declaration (set)
+.end method
+
+.method public abstract add(LMyObject;)V
+;  (146) Method Declaration (add)
+.end method
+

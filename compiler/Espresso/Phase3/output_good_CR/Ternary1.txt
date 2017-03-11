@@ -1,0 +1,32 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'Assignment1' into global class table.
+MethodDecl:	 Inserting method 'mm' with signature '' into method table for class 'Assignment1'.
+MethodDecl:	 Inserting method 'main' with signature '' into method table for class 'Assignment1'.
+ClassDecl:	 Generating default construction <init>() for class 'Assignment1'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassDecl:	 Visiting class 'Assignment1'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'mm' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+LocalDecl:	 Declaring local symbol 'aa'.
+NameExpr:	 Looking up symbol 'aa'.
+ Found Local Variable
+MethodDecl:	 Creating new scope for Method 'main' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+LocalDecl:	 Declaring local symbol 'a'.
+LocalDecl:	 Declaring local symbol 'b'.
+NameExpr:	 Looking up symbol 'a'.
+ Found Local Variable
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Assignment1
+ClassDecl:	 Visiting class 'Object'
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Object
+** Resolving symbols and defining locals. ** DONE!
+Phase 3 successfully terminated.
+============= S = U = C = C = E = S = S =================

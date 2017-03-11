@@ -1,0 +1,67 @@
+.class public V
+.super java/lang/Object
+.implements VV
+
+.method public <init>(I)V
+	.limit stack 50
+	.limit locals 2
+;  (12) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (12) Field Init Generation Start
+;  (12) Field Init Generation End
+	return
+.end method
+
+.method public foo(I)I
+	.limit stack 50
+	.limit locals 2
+;  (13) Method Declaration (foo)
+;  (14) Return Statement
+;  (14) Name Expression --
+	iload_1
+;  (14) End NameExpr
+	ireturn
+;  (14) End ReturnStat
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 2
+;  (16) Method Declaration (main)
+;  (17) Local Variable Declaration
+;  (17) New
+	new V
+	dup
+;  (17) Literal
+	iconst_4
+;  (17) End Literal
+	invokespecial V/<init>(I)V
+;  (17) End New
+	astore_1
+;  (17) End LocalDecl
+;  (18) Expression Statement
+;  (18) Invocation
+;  (18) Field Reference
+;  (18) Name Expression --
+;  (18) End NameExpr
+	getstatic System/out LIo;
+;  (18) End FieldRef
+	pop
+;  (18) Invocation
+;  (18) Name Expression --
+	aload_1
+;  (18) End NameExpr
+;  (18) Literal
+	iconst_3
+;  (18) End Literal
+	invokevirtual V/foo(I)I
+;  (18) End Invocation
+	invokestatic Io/println(I)V
+;  (18) End Invocation
+;  (18) End ExprStat
+	return
+.end method
+

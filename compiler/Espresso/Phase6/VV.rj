@@ -1,0 +1,9 @@
+.interface public abstract  VV
+.super java/lang/Object
+
+.field public static final i I = 9
+
+.method public abstract foo(I)I
+;  (7) Method Declaration (foo)
+.end method
+

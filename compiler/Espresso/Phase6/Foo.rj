@@ -1,0 +1,77 @@
+.class public Foo
+.super java/lang/Object
+
+.field public static fubar I
+
+.method public getFoo()LFoo;
+	.limit stack 50
+	.limit locals 1
+;  (8) Method Declaration (getFoo)
+;  (9) Return Statement
+;  (9) Literal
+	aconst_null
+;  (9) End Literal
+	areturn
+;  (9) End ReturnStat
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 2
+;  (12) Method Declaration (main)
+;  (13) Local Variable Declaration
+;  (13) New
+	new Foo
+	dup
+	invokespecial Foo/<init>()V
+;  (13) End New
+	astore_1
+;  (13) End LocalDecl
+;  (14) Expression Statement
+;  (14) Invocation
+;  (14) Field Reference
+;  (14) Name Expression --
+;  (14) End NameExpr
+	getstatic System/out LIo;
+;  (14) End FieldRef
+	pop
+;  (14) Field Reference
+;  (14) Invocation
+;  (14) Name Expression --
+	aload_1
+;  (14) End NameExpr
+	invokevirtual Foo/getFoo()LFoo;
+;  (14) End Invocation
+	pop
+	getstatic Foo/fubar I
+;  (14) End FieldRef
+	invokestatic Io/println(I)V
+;  (14) End Invocation
+;  (14) End ExprStat
+	return
+.end method
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (0) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (0) Field Init Generation Start
+;  (0) Field Init Generation End
+	return
+.end method
+
+.method static <clinit>()V
+	.limit stack 50
+	.limit locals 1
+;  (0) Static Initializer
+;  (6) Literal
+	bipush 42
+;  (6) End Literal
+	putstatic Foo/fubar I
+	return
+.end method
+

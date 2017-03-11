@@ -1,0 +1,34 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'Reuse' into global class table.
+MethodDecl:	 Inserting method 'NotReuse' with signature 'LReuse;' into method table for class 'Reuse'.
+ClassDecl:	 Generating default construction <init>() for class 'Reuse'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'Reuse'
+ClassType:	 Setting myDecl for 'Reuse'
+ClassDecl:	 Visiting class 'Reuse'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'NotReuse' with signature 'LReuse;' (Parameters and Locals).
+ClassType:	 Looking up class/interface 'Reuse' in class table.
+ParamDecl:	 Declaring local symbol 'reuse'.
+ClassType:	 Looking up class/interface 'Reuse' in class table.
+Block:		 Creating new scope for Block.
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'Reuse'.
+ Found Class
+NameExpr:	 Looking up symbol 'reuse'.
+ Found Parameter
+NameExpr:	 Looking up symbol 'reuse'.
+ Found Parameter
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Reuse
+ClassDecl:	 Visiting class 'Object'
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Object
+** Resolving symbols and defining locals. ** DONE!
+Phase 3 successfully terminated.
+============= S = U = C = C = E = S = S =================

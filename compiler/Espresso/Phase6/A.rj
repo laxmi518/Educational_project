@@ -1,0 +1,44 @@
+.class public A
+.super java/lang/Object
+
+.field public a I
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (12) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (12) Field Init Generation Start
+;  (12) Field Init Generation End
+;  (13) Expression Statement
+;  (13) Assignment
+;  (13) This
+	aload_0
+;  (13) End This
+;  (13) Literal
+	bipush 89
+;  (13) End Literal
+	putfield A/a I
+;  (13) End Assignment
+;  (13) End ExprStat
+	return
+.end method
+
+.method public foo()I
+	.limit stack 50
+	.limit locals 1
+;  (15) Method Declaration (foo)
+;  (16) Return Statement
+;  (16) Field Reference
+;  (16) This
+	aload_0
+;  (16) End This
+	getfield A/a I
+;  (16) End FieldRef
+	ireturn
+;  (16) End ReturnStat
+.end method
+

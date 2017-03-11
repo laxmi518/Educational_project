@@ -1,0 +1,242 @@
+** Defining Classes, Members and Fields. **
+ClassDecl:	 Inserting class 'Io' into global class table.
+MethodDecl:	 Inserting method 'print' with signature 'B' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'S' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'C' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'I' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'J' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'F' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'D' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'Ljava/lang/String;' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'print' with signature 'Z' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'B' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'S' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'C' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'I' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'J' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'F' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'D' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'Ljava/lang/String;' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'println' with signature 'Z' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'readInt' with signature '' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'readLong' with signature '' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'readFloat' with signature '' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'readDouble' with signature '' into method table for class 'Io'.
+MethodDecl:	 Inserting method 'readString' with signature '' into method table for class 'Io'.
+ClassDecl:	 Generating default construction <init>() for class 'Io'
+ClassDecl:	 Inserting class 'Tree' into global class table.
+FieldDecl:	 Inserting field 'value' into field table of class 'Tree'.
+FieldDecl:	 Inserting field 'left' into field table of class 'Tree'.
+FieldDecl:	 Inserting field 'right' into field table of class 'Tree'.
+ConstructorDecl: Inserting constructor '<init>' with signature 'I' into method table for class 'Tree'.
+MethodDecl:	 Inserting method 'insert' with signature 'I' into method table for class 'Tree'.
+MethodDecl:	 Inserting method 'traverse' with signature '' into method table for class 'Tree'.
+ClassDecl:	 Inserting class 'Main' into global class table.
+MethodDecl:	 Inserting method 'main' with signature '' into method table for class 'Main'.
+ClassDecl:	 Generating default construction <init>() for class 'Main'
+ClassDecl:	 Inserting class 'Object' into global class table.
+ClassDecl:	 Generating default construction <init>() for class 'Object'
+** Defining Classes, Members and Fields. ** DONE!
+---------------------------------------------------------
+** Resolving symbols and defining locals. **
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Object'
+ClassType:	 Setting myDecl for 'Tree'
+ClassType:	 Setting myDecl for 'Tree'
+ClassDecl:	 Visiting class 'Io'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'B' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'b'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'S' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 's'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'C' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'c'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'I' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'i'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'J' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'l'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'F' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'f'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'D' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'd'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'Ljava/lang/String;' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 's'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'print' with signature 'Z' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'b'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'B' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'b'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'S' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 's'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'C' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'c'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'I' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'i'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'J' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'l'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'F' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'f'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'D' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'd'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'Ljava/lang/String;' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 's'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'println' with signature 'Z' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'b'.
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'readInt' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'readLong' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'readFloat' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'readDouble' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+MethodDecl:	 Creating new scope for Method 'readString' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Io
+ClassDecl:	 Visiting class 'Tree'
+ClassType:	 Looking up class/interface 'Object' in class table.
+ClassType:	 Looking up class/interface 'Tree' in class table.
+ClassType:	 Looking up class/interface 'Tree' in class table.
+ConstructorDecl: Creating new scope for constructor <init> with signature 'I' (Parameters and Locals).
+ParamDecl:	 Declaring local symbol 'value'.
+FieldRef:	 Looking up field 'value'.
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+MethodDecl:	 Creating new scope for Method 'insert' with signature 'I' (Parameters and Locals).
+ClassType:	 Looking up class/interface 'Tree' in class table.
+ParamDecl:	 Declaring local symbol 'value'.
+Block:		 Creating new scope for Block.
+FieldRef:	 Looking up field 'value'.
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+Block:		 Creating new scope for Block.
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+ClassType:	 Looking up class/interface 'Tree' in class table.
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+FieldRef:	 Looking up field 'value'.
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+Block:		 Creating new scope for Block.
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+ClassType:	 Looking up class/interface 'Tree' in class table.
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+NameExpr:	 Looking up symbol 'value'.
+ Found Parameter
+MethodDecl:	 Creating new scope for Method 'traverse' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'left'.
+ Found Field
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'Io'.
+ Found Class
+NameExpr:	 Looking up symbol 'value'.
+ Found Field
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'right'.
+ Found Field
+ClassDecl:	 Performing tree Rewrite on Tree
+ClassDecl:	 Visiting class 'Main'
+ClassType:	 Looking up class/interface 'Object' in class table.
+MethodDecl:	 Creating new scope for Method 'main' with signature '' (Parameters and Locals).
+Block:		 Creating new scope for Block.
+LocalDecl:	 Declaring local symbol 'no'.
+LocalDecl:	 Declaring local symbol 'temp'.
+LocalDecl:	 Declaring local symbol 't'.
+ClassType:	 Looking up class/interface 'Tree' in class table.
+NameExpr:	 Looking up symbol 'no'.
+ Found Local Variable
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'Io'.
+ Found Class
+ForStat:	 Creating new scope for For Statement.
+LocalDecl:	 Declaring local symbol 'i'.
+NameExpr:	 Looking up symbol 'i'.
+ Found Local Variable
+NameExpr:	 Looking up symbol 'no'.
+ Found Local Variable
+NameExpr:	 Looking up symbol 'i'.
+ Found Local Variable
+Block:		 Creating new scope for Block.
+NameExpr:	 Looking up symbol 'temp'.
+ Found Local Variable
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 'Io'.
+ Found Class
+NameExpr:	 Looking up symbol 't'.
+ Found Local Variable
+NameExpr:	 Looking up symbol 't'.
+ Found Local Variable
+ClassType:	 Looking up class/interface 'Tree' in class table.
+NameExpr:	 Looking up symbol 'temp'.
+ Found Local Variable
+NameExpr:	 Looking up symbol 't'.
+ Found Local Variable
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 't'.
+ Found Local Variable
+NameExpr:	 Looking up symbol 'temp'.
+ Found Local Variable
+Invocation:	 Target too complicated for now!
+NameExpr:	 Looking up symbol 't'.
+ Found Local Variable
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Main
+ClassDecl:	 Visiting class 'Object'
+ConstructorDecl: Creating new scope for constructor <init> with signature '' (Parameters and Locals).
+ClassDecl:	 Performing tree Rewrite on Object
+** Resolving symbols and defining locals. ** DONE!
+Phase 3 successfully terminated.
+============= S = U = C = C = E = S = S =================

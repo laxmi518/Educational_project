@@ -1,0 +1,410 @@
+.class public Roman
+.super java/lang/Object
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 4
+;  (7) Method Declaration (main)
+;  (8) Local Variable Declaration
+;  (8) NewArray
+;  (8) ArrayLiteral
+	bipush 22
+	newarray int
+	dup
+	iconst_0
+;  (8) Literal
+	bipush 100
+;  (8) End Literal
+	iastore
+	dup
+	iconst_1
+;  (8) Literal
+	sipush 500
+;  (8) End Literal
+	iastore
+	dup
+	iconst_2
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	iconst_3
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	iconst_4
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	iconst_5
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 6
+;  (8) Literal
+	iconst_1
+;  (8) End Literal
+	iastore
+	dup
+	bipush 7
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 8
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 9
+;  (8) Literal
+	bipush 50
+;  (8) End Literal
+	iastore
+	dup
+	bipush 10
+;  (8) Literal
+	sipush 1000
+;  (8) End Literal
+	iastore
+	dup
+	bipush 11
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 12
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 13
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 14
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 15
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 16
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 17
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 18
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 19
+;  (8) Literal
+	iconst_5
+;  (8) End Literal
+	iastore
+	dup
+	bipush 20
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	iastore
+	dup
+	bipush 21
+;  (8) Literal
+	bipush 10
+;  (8) End Literal
+	iastore
+;  (8) End ArrayLiteral
+;  (8) End NewArray
+	astore_1
+;  (8) End LocalDecl
+;  (8) Local Variable Declaration
+;  (8) Literal
+	iconst_0
+;  (8) End Literal
+	istore_2
+;  (8) End LocalDecl
+;  (9) For Statement
+;  (9) Expression Statement
+;  (9) Assignment
+;  (9) Literal
+	iconst_0
+;  (9) End Literal
+	istore_3
+;  (9) End Assignment
+;  (9) End ExprStat
+L1:
+;  (9) Binary Expression
+;  (9) Name Expression --
+	iload_3
+;  (9) End NameExpr
+;  (9) Binary Expression
+;  (9) Invocation
+;  (9) ArrayAccessExpr
+;  (9) Name Expression --
+	aload_0
+;  (9) End NameExpr
+;  (9) Literal
+	iconst_0
+;  (9) End Literal
+	aaload
+;  (9) End ArrayAccessExpr
+	invokevirtual java/lang/String/length()I
+;  (9) End Invocation
+;  (9) Literal
+	iconst_1
+;  (9) End Literal
+	isub
+;  (9) End BinaryExpr
+	if_icmplt L4
+	iconst_0
+	goto L5
+L4:
+	iconst_1
+L5:
+;  (9) End BinaryExpr
+	ifeq L2
+;  (10) Expression Statement
+;  (10) Assignment
+	iload_2
+;  (10) Binary Expression
+;  (10) Ternary Statement
+;  (10) Binary Expression
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_1
+;  (10) End NameExpr
+;  (10) Binary Expression
+;  (10) Invocation
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_0
+;  (10) End NameExpr
+;  (10) Literal
+	iconst_0
+;  (10) End Literal
+	aaload
+;  (10) End ArrayAccessExpr
+;  (10) Name Expression --
+	iload_3
+;  (10) End NameExpr
+	invokevirtual java/lang/String/charAt(I)C
+;  (10) End Invocation
+;  (10) Literal
+	bipush 67
+;  (10) End Literal
+	isub
+;  (10) End BinaryExpr
+	iaload
+;  (10) End ArrayAccessExpr
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_1
+;  (10) End NameExpr
+;  (10) Binary Expression
+;  (10) Invocation
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_0
+;  (10) End NameExpr
+;  (10) Literal
+	iconst_0
+;  (10) End Literal
+	aaload
+;  (10) End ArrayAccessExpr
+;  (10) Binary Expression
+;  (10) Name Expression --
+	iload_3
+;  (10) End NameExpr
+;  (10) Literal
+	iconst_1
+;  (10) End Literal
+	iadd
+;  (10) End BinaryExpr
+	invokevirtual java/lang/String/charAt(I)C
+;  (10) End Invocation
+;  (10) Literal
+	bipush 67
+;  (10) End Literal
+	isub
+;  (10) End BinaryExpr
+	iaload
+;  (10) End ArrayAccessExpr
+	if_icmplt L8
+	iconst_0
+	goto L9
+L8:
+	iconst_1
+L9:
+;  (10) End BinaryExpr
+	ifeq L6
+;  (10) Unary Pre Expression
+;  (10) Literal
+	iconst_1
+;  (10) End Literal
+	ineg
+;  (10) End UnaryPreExpr
+	goto L7
+L6:
+;  (10) Literal
+	iconst_1
+;  (10) End Literal
+L7:
+;  (10) Ternary
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_1
+;  (10) End NameExpr
+;  (10) Binary Expression
+;  (10) Invocation
+;  (10) ArrayAccessExpr
+;  (10) Name Expression --
+	aload_0
+;  (10) End NameExpr
+;  (10) Literal
+	iconst_0
+;  (10) End Literal
+	aaload
+;  (10) End ArrayAccessExpr
+;  (10) Name Expression --
+	iload_3
+;  (10) End NameExpr
+	invokevirtual java/lang/String/charAt(I)C
+;  (10) End Invocation
+;  (10) Literal
+	bipush 67
+;  (10) End Literal
+	isub
+;  (10) End BinaryExpr
+	iaload
+;  (10) End ArrayAccessExpr
+	imul
+;  (10) End BinaryExpr
+	iadd
+	istore_2
+;  (10) End Assignment
+;  (10) End ExprStat
+L3:
+;  (9) Expression Statement
+;  (9) Unary Post Expression
+;  (9) Name Expression --
+	iload_3
+;  (9) End NameExpr
+	iinc 3 1
+;  (9) End UnaryPostExpr
+	pop
+;  (9) End ExprStat
+	goto L1
+L2:
+;  (9) End ForStat
+;  (11) Expression Statement
+;  (11) Invocation
+;  (11) Field Reference
+;  (11) Name Expression --
+;  (11) End NameExpr
+	getstatic System/out LIo;
+;  (11) End FieldRef
+	pop
+;  (11) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (11) Binary Expression
+;  (11) ArrayAccessExpr
+;  (11) Name Expression --
+	aload_0
+;  (11) End NameExpr
+;  (11) Literal
+	iconst_0
+;  (11) End Literal
+	aaload
+;  (11) End ArrayAccessExpr
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (11) Literal
+	ldc " = "
+;  (11) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (11) End BinaryExpr
+;  (11) Binary Expression
+;  (11) Name Expression --
+	iload_2
+;  (11) End NameExpr
+;  (11) ArrayAccessExpr
+;  (11) Name Expression --
+	aload_1
+;  (11) End NameExpr
+;  (11) Binary Expression
+;  (11) Invocation
+;  (11) ArrayAccessExpr
+;  (11) Name Expression --
+	aload_0
+;  (11) End NameExpr
+;  (11) Literal
+	iconst_0
+;  (11) End Literal
+	aaload
+;  (11) End ArrayAccessExpr
+;  (11) Name Expression --
+	iload_3
+;  (11) End NameExpr
+	invokevirtual java/lang/String/charAt(I)C
+;  (11) End Invocation
+;  (11) Literal
+	bipush 67
+;  (11) End Literal
+	isub
+;  (11) End BinaryExpr
+	iaload
+;  (11) End ArrayAccessExpr
+	iadd
+;  (11) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (11) End BinaryExpr
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (11) End Invocation
+;  (11) End ExprStat
+	return
+.end method
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (0) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (0) Field Init Generation Start
+;  (0) Field Init Generation End
+	return
+.end method
+

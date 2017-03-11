@@ -1,0 +1,208 @@
+.class public AA
+.super A
+
+.field public b I
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (25) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial A/<init>()V
+;  (0) End CInvocation
+;  (25) Field Init Generation Start
+;  (25) Field Init Generation End
+;  (26) Expression Statement
+;  (26) Assignment
+;  (26) This
+	aload_0
+;  (26) End This
+;  (26) Literal
+	bipush 89
+;  (26) End Literal
+	putfield AA/b I
+;  (26) End Assignment
+;  (26) End ExprStat
+	return
+.end method
+
+.method public <init>(I)V
+	.limit stack 50
+	.limit locals 2
+;  (29) Constructor Declaration
+;  (30) Explicit Constructor Invocation
+	aload_0
+;  (30) Binary Expression
+;  (30) Name Expression --
+	iload_1
+;  (30) End NameExpr
+;  (30) Literal
+	bipush 10
+;  (30) End Literal
+	iadd
+;  (30) End BinaryExpr
+	invokespecial A/<init>(I)V
+;  (30) End CInvocation
+;  (29) Field Init Generation Start
+;  (29) Field Init Generation End
+;  (31) Expression Statement
+;  (31) Assignment
+;  (31) This
+	aload_0
+;  (31) End This
+;  (31) Name Expression --
+	iload_1
+;  (31) End NameExpr
+	putfield AA/b I
+;  (31) End Assignment
+;  (31) End ExprStat
+	return
+.end method
+
+.method public bar()V
+	.limit stack 50
+	.limit locals 2
+;  (34) Method Declaration (bar)
+;  (36) Expression Statement
+;  (36) Invocation
+;  (36) Super
+	aload_0
+;  (36) End Super
+	invokespecial A/bar()V
+;  (36) End Invocation
+;  (36) End ExprStat
+;  (38) Expression Statement
+;  (38) Assignment
+;  (38) Binary Expression
+;  (38) Field Reference
+;  (38) This
+	aload_0
+;  (38) End This
+	getfield AA/b I
+;  (38) End FieldRef
+;  (38) Field Reference
+;  (38) This
+	aload_0
+;  (38) End This
+	getfield AA/a I
+;  (38) End FieldRef
+	iadd
+;  (38) End BinaryExpr
+	istore_1
+;  (38) End Assignment
+;  (38) End ExprStat
+;  (39) Expression Statement
+;  (39) Invocation
+;  (39) Field Reference
+;  (39) Name Expression --
+;  (39) End NameExpr
+	getstatic System/out LIo;
+;  (39) End FieldRef
+	pop
+;  (39) Literal
+	ldc "From AA:"
+;  (39) End Literal
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (39) End Invocation
+;  (39) End ExprStat
+;  (40) Expression Statement
+;  (40) Invocation
+;  (40) Field Reference
+;  (40) Name Expression --
+;  (40) End NameExpr
+	getstatic System/out LIo;
+;  (40) End FieldRef
+	pop
+;  (40) Name Expression --
+	iload_1
+;  (40) End NameExpr
+	invokestatic Io/println(I)V
+;  (40) End Invocation
+;  (40) End ExprStat
+	return
+.end method
+
+.method private <init>(Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 2
+;  (43) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial A/<init>()V
+;  (0) End CInvocation
+;  (43) Field Init Generation Start
+;  (43) Field Init Generation End
+	return
+.end method
+
+.method public foo()V
+	.limit stack 50
+	.limit locals 5
+;  (45) Method Declaration (foo)
+;  (46) Local Variable Declaration
+;  (46) New
+	new AA
+	dup
+	invokespecial AA/<init>()V
+;  (46) End New
+	astore_1
+;  (46) End LocalDecl
+;  (47) Local Variable Declaration
+;  (47) New
+	new AA
+	dup
+;  (47) Literal
+	iconst_5
+;  (47) End Literal
+	invokespecial AA/<init>(I)V
+;  (47) End New
+	astore_2
+;  (47) End LocalDecl
+;  (48) Local Variable Declaration
+;  (48) New
+	new A
+	dup
+	invokespecial A/<init>()V
+;  (48) End New
+	astore_3
+;  (48) End LocalDecl
+;  (50) Local Variable Declaration
+;  (50) New
+	new AA
+	dup
+;  (50) Literal
+	ldc "Hello"
+;  (50) End Literal
+	invokespecial AA/<init>(Ljava/lang/String;)V
+;  (50) End New
+	astore 4
+;  (50) End LocalDecl
+;  (51) Expression Statement
+;  (51) Invocation
+;  (51) Name Expression --
+	aload_2
+;  (51) End NameExpr
+	invokevirtual AA/bar()V
+;  (51) End Invocation
+;  (51) End ExprStat
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 1
+;  (53) Method Declaration (main)
+;  (54) Expression Statement
+;  (54) Invocation
+;  (54) New
+	new AA
+	dup
+	invokespecial AA/<init>()V
+;  (54) End New
+	invokevirtual AA/foo()V
+;  (54) End Invocation
+;  (54) End ExprStat
+	return
+.end method
+

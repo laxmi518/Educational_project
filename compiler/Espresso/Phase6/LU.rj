@@ -1,0 +1,2214 @@
+.class public LU
+.super java/lang/Object
+
+.field private LU_ [[D
+
+.field private pivot_ [I
+
+.method public static final num_flops(I)D
+	.limit stack 50
+	.limit locals 3
+;  (11) Method Declaration (num_flops)
+;  (14) Local Variable Declaration
+;  (14) Cast Expression
+;  (14) Name Expression --
+	iload_0
+;  (14) End NameExpr
+	i2d
+;  (14) End CastExpr
+	dstore_1
+;  (14) End LocalDecl
+;  (16) Return Statement
+;  (16) Binary Expression
+;  (16) Binary Expression
+;  (16) Binary Expression
+;  (16) Binary Expression
+;  (16) Literal
+	ldc2_w 2.0
+;  (16) End Literal
+;  (16) Name Expression --
+	dload_1
+;  (16) End NameExpr
+	dmul
+;  (16) End BinaryExpr
+;  (16) Name Expression --
+	dload_1
+;  (16) End NameExpr
+	dmul
+;  (16) End BinaryExpr
+;  (16) Name Expression --
+	dload_1
+;  (16) End NameExpr
+	dmul
+;  (16) End BinaryExpr
+;  (16) Literal
+	ldc2_w 3.0
+;  (16) End Literal
+	ddiv
+;  (16) End BinaryExpr
+	dreturn
+;  (16) End ReturnStat
+.end method
+
+.method public static new_copy([D)[D
+	.limit stack 50
+	.limit locals 4
+;  (19) Method Declaration (new_copy)
+;  (20) Local Variable Declaration
+;  (20) Array length
+;  (20) Name Expression --
+	aload_0
+;  (20) End NameExpr
+	arraylength
+	istore_1
+;  (20) End LocalDecl
+;  (21) Local Variable Declaration
+;  (21) NewArray
+;  (21) Name Expression --
+	iload_1
+;  (21) End NameExpr
+	newarray double
+;  (21) End NewArray
+	astore_2
+;  (21) End LocalDecl
+;  (22) For Statement
+;  (22) Local Variable Declaration
+;  (22) Literal
+	iconst_0
+;  (22) End Literal
+	istore_3
+;  (22) End LocalDecl
+L1:
+;  (22) Binary Expression
+;  (22) Name Expression --
+	iload_3
+;  (22) End NameExpr
+;  (22) Name Expression --
+	iload_1
+;  (22) End NameExpr
+	if_icmplt L4
+	iconst_0
+	goto L5
+L4:
+	iconst_1
+L5:
+;  (22) End BinaryExpr
+	ifeq L2
+;  (23) Expression Statement
+;  (23) Assignment
+;  (23) ArrayAccessExpr target
+;  (23) Name Expression --
+	aload_2
+;  (23) End NameExpr
+;  (23) ArrayAccessExpr index
+;  (23) Name Expression --
+	iload_3
+;  (23) End NameExpr
+;  (23) ArrayAccessExpr
+;  (23) Name Expression --
+	aload_0
+;  (23) End NameExpr
+;  (23) Name Expression --
+	iload_3
+;  (23) End NameExpr
+	daload
+;  (23) End ArrayAccessExpr
+	dastore
+;  (23) End Assignment
+;  (23) End ExprStat
+L3:
+;  (22) Expression Statement
+;  (22) Unary Post Expression
+;  (22) Name Expression --
+	iload_3
+;  (22) End NameExpr
+	iinc 3 1
+;  (22) End UnaryPostExpr
+	pop
+;  (22) End ExprStat
+	goto L1
+L2:
+;  (22) End ForStat
+;  (24) Return Statement
+;  (24) Name Expression --
+	aload_2
+;  (24) End NameExpr
+	areturn
+;  (24) End ReturnStat
+.end method
+
+.method public static new_copy([[D)[[D
+	.limit stack 50
+	.limit locals 8
+;  (27) Method Declaration (new_copy)
+;  (28) Local Variable Declaration
+;  (28) Array length
+;  (28) Name Expression --
+	aload_0
+;  (28) End NameExpr
+	arraylength
+	istore_1
+;  (28) End LocalDecl
+;  (29) Local Variable Declaration
+;  (29) Array length
+;  (29) ArrayAccessExpr
+;  (29) Name Expression --
+	aload_0
+;  (29) End NameExpr
+;  (29) Literal
+	iconst_0
+;  (29) End Literal
+	aaload
+;  (29) End ArrayAccessExpr
+	arraylength
+	istore_2
+;  (29) End LocalDecl
+;  (31) Local Variable Declaration
+;  (31) NewArray
+;  (31) Name Expression --
+	iload_1
+;  (31) End NameExpr
+;  (31) Name Expression --
+	iload_2
+;  (31) End NameExpr
+	multianewarray [[D 2
+;  (31) End NewArray
+	astore_3
+;  (31) End LocalDecl
+;  (33) For Statement
+;  (33) Local Variable Declaration
+;  (33) Literal
+	iconst_0
+;  (33) End Literal
+	istore 4
+;  (33) End LocalDecl
+L6:
+;  (33) Binary Expression
+;  (33) Name Expression --
+	iload 4
+;  (33) End NameExpr
+;  (33) Name Expression --
+	iload_1
+;  (33) End NameExpr
+	if_icmplt L9
+	iconst_0
+	goto L10
+L9:
+	iconst_1
+L10:
+;  (33) End BinaryExpr
+	ifeq L7
+;  (34) Local Variable Declaration
+;  (34) ArrayAccessExpr
+;  (34) Name Expression --
+	aload_3
+;  (34) End NameExpr
+;  (34) Name Expression --
+	iload 4
+;  (34) End NameExpr
+	aaload
+;  (34) End ArrayAccessExpr
+	astore 5
+;  (34) End LocalDecl
+;  (35) Local Variable Declaration
+;  (35) ArrayAccessExpr
+;  (35) Name Expression --
+	aload_0
+;  (35) End NameExpr
+;  (35) Name Expression --
+	iload 4
+;  (35) End NameExpr
+	aaload
+;  (35) End ArrayAccessExpr
+	astore 6
+;  (35) End LocalDecl
+;  (36) For Statement
+;  (36) Local Variable Declaration
+;  (36) Literal
+	iconst_0
+;  (36) End Literal
+	istore 7
+;  (36) End LocalDecl
+L11:
+;  (36) Binary Expression
+;  (36) Name Expression --
+	iload 7
+;  (36) End NameExpr
+;  (36) Name Expression --
+	iload_2
+;  (36) End NameExpr
+	if_icmplt L14
+	iconst_0
+	goto L15
+L14:
+	iconst_1
+L15:
+;  (36) End BinaryExpr
+	ifeq L12
+;  (37) Expression Statement
+;  (37) Assignment
+;  (37) ArrayAccessExpr target
+;  (37) Name Expression --
+	aload 5
+;  (37) End NameExpr
+;  (37) ArrayAccessExpr index
+;  (37) Name Expression --
+	iload 7
+;  (37) End NameExpr
+;  (37) ArrayAccessExpr
+;  (37) Name Expression --
+	aload 6
+;  (37) End NameExpr
+;  (37) Name Expression --
+	iload 7
+;  (37) End NameExpr
+	daload
+;  (37) End ArrayAccessExpr
+	dastore
+;  (37) End Assignment
+;  (37) End ExprStat
+L13:
+;  (36) Expression Statement
+;  (36) Unary Post Expression
+;  (36) Name Expression --
+	iload 7
+;  (36) End NameExpr
+	iinc 7 1
+;  (36) End UnaryPostExpr
+	pop
+;  (36) End ExprStat
+	goto L11
+L12:
+;  (36) End ForStat
+L8:
+;  (33) Expression Statement
+;  (33) Unary Post Expression
+;  (33) Name Expression --
+	iload 4
+;  (33) End NameExpr
+	iinc 4 1
+;  (33) End UnaryPostExpr
+	pop
+;  (33) End ExprStat
+	goto L6
+L7:
+;  (33) End ForStat
+;  (40) Return Statement
+;  (40) Name Expression --
+	aload_3
+;  (40) End NameExpr
+	areturn
+;  (40) End ReturnStat
+.end method
+
+.method public static new_copy([I)[I
+	.limit stack 50
+	.limit locals 4
+;  (43) Method Declaration (new_copy)
+;  (44) Local Variable Declaration
+;  (44) Array length
+;  (44) Name Expression --
+	aload_0
+;  (44) End NameExpr
+	arraylength
+	istore_1
+;  (44) End LocalDecl
+;  (45) Local Variable Declaration
+;  (45) NewArray
+;  (45) Name Expression --
+	iload_1
+;  (45) End NameExpr
+	newarray int
+;  (45) End NewArray
+	astore_2
+;  (45) End LocalDecl
+;  (46) For Statement
+;  (46) Local Variable Declaration
+;  (46) Literal
+	iconst_0
+;  (46) End Literal
+	istore_3
+;  (46) End LocalDecl
+L16:
+;  (46) Binary Expression
+;  (46) Name Expression --
+	iload_3
+;  (46) End NameExpr
+;  (46) Name Expression --
+	iload_1
+;  (46) End NameExpr
+	if_icmplt L19
+	iconst_0
+	goto L20
+L19:
+	iconst_1
+L20:
+;  (46) End BinaryExpr
+	ifeq L17
+;  (47) Expression Statement
+;  (47) Assignment
+;  (47) ArrayAccessExpr target
+;  (47) Name Expression --
+	aload_2
+;  (47) End NameExpr
+;  (47) ArrayAccessExpr index
+;  (47) Name Expression --
+	iload_3
+;  (47) End NameExpr
+;  (47) ArrayAccessExpr
+;  (47) Name Expression --
+	aload_0
+;  (47) End NameExpr
+;  (47) Name Expression --
+	iload_3
+;  (47) End NameExpr
+	iaload
+;  (47) End ArrayAccessExpr
+	iastore
+;  (47) End Assignment
+;  (47) End ExprStat
+L18:
+;  (46) Expression Statement
+;  (46) Unary Post Expression
+;  (46) Name Expression --
+	iload_3
+;  (46) End NameExpr
+	iinc 3 1
+;  (46) End UnaryPostExpr
+	pop
+;  (46) End ExprStat
+	goto L16
+L17:
+;  (46) End ForStat
+;  (48) Return Statement
+;  (48) Name Expression --
+	aload_2
+;  (48) End NameExpr
+	areturn
+;  (48) End ReturnStat
+.end method
+
+.method public static final insert_copy([[D[[D)V
+	.limit stack 50
+	.limit locals 10
+;  (51) Method Declaration (insert_copy)
+;  (52) Local Variable Declaration
+;  (52) Array length
+;  (52) Name Expression --
+	aload_1
+;  (52) End NameExpr
+	arraylength
+	istore_2
+;  (52) End LocalDecl
+;  (53) Local Variable Declaration
+;  (53) Array length
+;  (53) ArrayAccessExpr
+;  (53) Name Expression --
+	aload_1
+;  (53) End NameExpr
+;  (53) Literal
+	iconst_0
+;  (53) End Literal
+	aaload
+;  (53) End ArrayAccessExpr
+	arraylength
+	istore_3
+;  (53) End LocalDecl
+;  (55) Local Variable Declaration
+;  (55) Binary Expression
+;  (55) Name Expression --
+	iload_3
+;  (55) End NameExpr
+;  (55) Literal
+	iconst_3
+;  (55) End Literal
+	iand
+;  (55) End BinaryExpr
+	istore 4
+;  (55) End LocalDecl
+;  (57) For Statement
+;  (57) Local Variable Declaration
+;  (57) Literal
+	iconst_0
+;  (57) End Literal
+	istore 5
+;  (57) End LocalDecl
+L21:
+;  (57) Binary Expression
+;  (57) Name Expression --
+	iload 5
+;  (57) End NameExpr
+;  (57) Name Expression --
+	iload_2
+;  (57) End NameExpr
+	if_icmplt L24
+	iconst_0
+	goto L25
+L24:
+	iconst_1
+L25:
+;  (57) End BinaryExpr
+	ifeq L22
+;  (58) Local Variable Declaration
+;  (58) ArrayAccessExpr
+;  (58) Name Expression --
+	aload_0
+;  (58) End NameExpr
+;  (58) Name Expression --
+	iload 5
+;  (58) End NameExpr
+	aaload
+;  (58) End ArrayAccessExpr
+	astore 6
+;  (58) End LocalDecl
+;  (59) Local Variable Declaration
+;  (59) ArrayAccessExpr
+;  (59) Name Expression --
+	aload_1
+;  (59) End NameExpr
+;  (59) Name Expression --
+	iload 5
+;  (59) End NameExpr
+	aaload
+;  (59) End ArrayAccessExpr
+	astore 7
+;  (59) End LocalDecl
+;  (60) For Statement
+;  (60) Local Variable Declaration
+;  (60) Literal
+	iconst_0
+;  (60) End Literal
+	istore 8
+;  (60) End LocalDecl
+L26:
+;  (60) Binary Expression
+;  (60) Name Expression --
+	iload 8
+;  (60) End NameExpr
+;  (60) Name Expression --
+	iload 4
+;  (60) End NameExpr
+	if_icmplt L29
+	iconst_0
+	goto L30
+L29:
+	iconst_1
+L30:
+;  (60) End BinaryExpr
+	ifeq L27
+;  (61) Expression Statement
+;  (61) Assignment
+;  (61) ArrayAccessExpr target
+;  (61) Name Expression --
+	aload 6
+;  (61) End NameExpr
+;  (61) ArrayAccessExpr index
+;  (61) Name Expression --
+	iload 8
+;  (61) End NameExpr
+;  (61) ArrayAccessExpr
+;  (61) Name Expression --
+	aload 7
+;  (61) End NameExpr
+;  (61) Name Expression --
+	iload 8
+;  (61) End NameExpr
+	daload
+;  (61) End ArrayAccessExpr
+	dastore
+;  (61) End Assignment
+;  (61) End ExprStat
+L28:
+;  (60) Expression Statement
+;  (60) Unary Post Expression
+;  (60) Name Expression --
+	iload 8
+;  (60) End NameExpr
+	iinc 8 1
+;  (60) End UnaryPostExpr
+	pop
+;  (60) End ExprStat
+	goto L26
+L27:
+;  (60) End ForStat
+;  (62) For Statement
+;  (62) Local Variable Declaration
+;  (62) Name Expression --
+	iload 4
+;  (62) End NameExpr
+	istore 9
+;  (62) End LocalDecl
+L31:
+;  (62) Binary Expression
+;  (62) Name Expression --
+	iload 9
+;  (62) End NameExpr
+;  (62) Name Expression --
+	iload_3
+;  (62) End NameExpr
+	if_icmplt L34
+	iconst_0
+	goto L35
+L34:
+	iconst_1
+L35:
+;  (62) End BinaryExpr
+	ifeq L32
+;  (63) Expression Statement
+;  (63) Assignment
+;  (63) ArrayAccessExpr target
+;  (63) Name Expression --
+	aload 6
+;  (63) End NameExpr
+;  (63) ArrayAccessExpr index
+;  (63) Name Expression --
+	iload 9
+;  (63) End NameExpr
+;  (63) ArrayAccessExpr
+;  (63) Name Expression --
+	aload 7
+;  (63) End NameExpr
+;  (63) Name Expression --
+	iload 9
+;  (63) End NameExpr
+	daload
+;  (63) End ArrayAccessExpr
+	dastore
+;  (63) End Assignment
+;  (63) End ExprStat
+;  (64) Expression Statement
+;  (64) Assignment
+;  (64) ArrayAccessExpr target
+;  (64) Name Expression --
+	aload 6
+;  (64) End NameExpr
+;  (64) ArrayAccessExpr index
+;  (64) Binary Expression
+;  (64) Name Expression --
+	iload 9
+;  (64) End NameExpr
+;  (64) Literal
+	iconst_1
+;  (64) End Literal
+	iadd
+;  (64) End BinaryExpr
+;  (64) ArrayAccessExpr
+;  (64) Name Expression --
+	aload 7
+;  (64) End NameExpr
+;  (64) Binary Expression
+;  (64) Name Expression --
+	iload 9
+;  (64) End NameExpr
+;  (64) Literal
+	iconst_1
+;  (64) End Literal
+	iadd
+;  (64) End BinaryExpr
+	daload
+;  (64) End ArrayAccessExpr
+	dastore
+;  (64) End Assignment
+;  (64) End ExprStat
+;  (65) Expression Statement
+;  (65) Assignment
+;  (65) ArrayAccessExpr target
+;  (65) Name Expression --
+	aload 6
+;  (65) End NameExpr
+;  (65) ArrayAccessExpr index
+;  (65) Binary Expression
+;  (65) Name Expression --
+	iload 9
+;  (65) End NameExpr
+;  (65) Literal
+	iconst_2
+;  (65) End Literal
+	iadd
+;  (65) End BinaryExpr
+;  (65) ArrayAccessExpr
+;  (65) Name Expression --
+	aload 7
+;  (65) End NameExpr
+;  (65) Binary Expression
+;  (65) Name Expression --
+	iload 9
+;  (65) End NameExpr
+;  (65) Literal
+	iconst_2
+;  (65) End Literal
+	iadd
+;  (65) End BinaryExpr
+	daload
+;  (65) End ArrayAccessExpr
+	dastore
+;  (65) End Assignment
+;  (65) End ExprStat
+;  (66) Expression Statement
+;  (66) Assignment
+;  (66) ArrayAccessExpr target
+;  (66) Name Expression --
+	aload 6
+;  (66) End NameExpr
+;  (66) ArrayAccessExpr index
+;  (66) Binary Expression
+;  (66) Name Expression --
+	iload 9
+;  (66) End NameExpr
+;  (66) Literal
+	iconst_3
+;  (66) End Literal
+	iadd
+;  (66) End BinaryExpr
+;  (66) ArrayAccessExpr
+;  (66) Name Expression --
+	aload 7
+;  (66) End NameExpr
+;  (66) Binary Expression
+;  (66) Name Expression --
+	iload 9
+;  (66) End NameExpr
+;  (66) Literal
+	iconst_3
+;  (66) End Literal
+	iadd
+;  (66) End BinaryExpr
+	daload
+;  (66) End ArrayAccessExpr
+	dastore
+;  (66) End Assignment
+;  (66) End ExprStat
+L33:
+;  (62) Expression Statement
+;  (62) Assignment
+	iload 9
+;  (62) Literal
+	iconst_4
+;  (62) End Literal
+	iadd
+	istore 9
+;  (62) End Assignment
+;  (62) End ExprStat
+	goto L31
+L32:
+;  (62) End ForStat
+L23:
+;  (57) Expression Statement
+;  (57) Unary Post Expression
+;  (57) Name Expression --
+	iload 5
+;  (57) End NameExpr
+	iinc 5 1
+;  (57) End UnaryPostExpr
+	pop
+;  (57) End ExprStat
+	goto L21
+L22:
+;  (57) End ForStat
+	return
+.end method
+
+.method public getLU()[[D
+	.limit stack 50
+	.limit locals 1
+;  (72) Method Declaration (getLU)
+;  (73) Return Statement
+;  (73) Invocation
+;  (73) Field Reference
+;  (73) This
+	aload_0
+;  (73) End This
+	getfield LU/LU_ [[D
+;  (73) End FieldRef
+	invokestatic LU/new_copy([[D)[[D
+;  (73) End Invocation
+	areturn
+;  (73) End ReturnStat
+.end method
+
+.method public getPivot()[I
+	.limit stack 50
+	.limit locals 1
+;  (84) Method Declaration (getPivot)
+;  (85) Return Statement
+;  (85) Invocation
+;  (85) Field Reference
+;  (85) This
+	aload_0
+;  (85) End This
+	getfield LU/pivot_ [I
+;  (85) End FieldRef
+	invokestatic LU/new_copy([I)[I
+;  (85) End Invocation
+	areturn
+;  (85) End ReturnStat
+.end method
+
+.method public <init>([[D)V
+	.limit stack 50
+	.limit locals 4
+;  (94) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (94) Field Init Generation Start
+;  (94) Field Init Generation End
+;  (95) Local Variable Declaration
+;  (95) Array length
+;  (95) Name Expression --
+	aload_1
+;  (95) End NameExpr
+	arraylength
+	istore_2
+;  (95) End LocalDecl
+;  (96) Local Variable Declaration
+;  (96) Array length
+;  (96) ArrayAccessExpr
+;  (96) Name Expression --
+	aload_1
+;  (96) End NameExpr
+;  (96) Literal
+	iconst_0
+;  (96) End Literal
+	aaload
+;  (96) End ArrayAccessExpr
+	arraylength
+	istore_3
+;  (96) End LocalDecl
+;  (99) Expression Statement
+;  (99) Assignment
+;  (99) This
+	aload_0
+;  (99) End This
+;  (99) NewArray
+;  (99) Name Expression --
+	iload_2
+;  (99) End NameExpr
+;  (99) Name Expression --
+	iload_3
+;  (99) End NameExpr
+	multianewarray [[D 2
+;  (99) End NewArray
+	putfield LU/LU_ [[D
+;  (99) End Assignment
+;  (99) End ExprStat
+;  (101) Expression Statement
+;  (101) Invocation
+;  (101) Field Reference
+;  (101) This
+	aload_0
+;  (101) End This
+	getfield LU/LU_ [[D
+;  (101) End FieldRef
+;  (101) Name Expression --
+	aload_1
+;  (101) End NameExpr
+	invokestatic LU/insert_copy([[D[[D)V
+;  (101) End Invocation
+;  (101) End ExprStat
+;  (104) Expression Statement
+;  (104) Assignment
+;  (104) This
+	aload_0
+;  (104) End This
+;  (104) NewArray
+;  (104) Name Expression --
+	iload_2
+;  (104) End NameExpr
+	newarray int
+;  (104) End NewArray
+	putfield LU/pivot_ [I
+;  (104) End Assignment
+;  (104) End ExprStat
+;  (106) Expression Statement
+;  (106) Invocation
+;  (106) Field Reference
+;  (106) This
+	aload_0
+;  (106) End This
+	getfield LU/LU_ [[D
+;  (106) End FieldRef
+;  (106) Field Reference
+;  (106) This
+	aload_0
+;  (106) End This
+	getfield LU/pivot_ [I
+;  (106) End FieldRef
+	invokestatic LU/factor([[D[I)I
+;  (106) End Invocation
+	pop
+;  (106) End ExprStat
+	return
+.end method
+
+.method public solve([D)[D
+	.limit stack 50
+	.limit locals 3
+;  (115) Method Declaration (solve)
+;  (116) Local Variable Declaration
+;  (116) Invocation
+;  (116) Name Expression --
+	aload_1
+;  (116) End NameExpr
+	invokestatic LU/new_copy([D)[D
+;  (116) End Invocation
+	astore_2
+;  (116) End LocalDecl
+;  (118) Expression Statement
+;  (118) Invocation
+;  (118) Field Reference
+;  (118) This
+	aload_0
+;  (118) End This
+	getfield LU/LU_ [[D
+;  (118) End FieldRef
+;  (118) Field Reference
+;  (118) This
+	aload_0
+;  (118) End This
+	getfield LU/pivot_ [I
+;  (118) End FieldRef
+;  (118) Name Expression --
+	aload_2
+;  (118) End NameExpr
+	invokestatic LU/solve([[D[I[D)V
+;  (118) End Invocation
+;  (118) End ExprStat
+;  (119) Return Statement
+;  (119) Name Expression --
+	aload_2
+;  (119) End NameExpr
+	areturn
+;  (119) End ReturnStat
+.end method
+
+.method public static factor([[D[I)I
+	.limit stack 50
+	.limit locals 22
+;  (134) Method Declaration (factor)
+;  (135) Local Variable Declaration
+;  (135) Array length
+;  (135) Name Expression --
+	aload_0
+;  (135) End NameExpr
+	arraylength
+	istore_2
+;  (135) End LocalDecl
+;  (136) Local Variable Declaration
+;  (136) Array length
+;  (136) ArrayAccessExpr
+;  (136) Name Expression --
+	aload_0
+;  (136) End NameExpr
+;  (136) Literal
+	iconst_0
+;  (136) End Literal
+	aaload
+;  (136) End ArrayAccessExpr
+	arraylength
+	istore_3
+;  (136) End LocalDecl
+;  (138) Local Variable Declaration
+;  (138) Invocation
+;  (138) Name Expression --
+;  (138) End NameExpr
+;  (138) Name Expression --
+	iload_3
+;  (138) End NameExpr
+;  (138) Name Expression --
+	iload_2
+;  (138) End NameExpr
+	invokestatic Math/min(II)I
+;  (138) End Invocation
+	istore 4
+;  (138) End LocalDecl
+;  (140) For Statement
+;  (140) Local Variable Declaration
+;  (140) Literal
+	iconst_0
+;  (140) End Literal
+	istore 5
+;  (140) End LocalDecl
+L36:
+;  (140) Binary Expression
+;  (140) Name Expression --
+	iload 5
+;  (140) End NameExpr
+;  (140) Name Expression --
+	iload 4
+;  (140) End NameExpr
+	if_icmplt L39
+	iconst_0
+	goto L40
+L39:
+	iconst_1
+L40:
+;  (140) End BinaryExpr
+	ifeq L37
+;  (143) Local Variable Declaration
+;  (143) Name Expression --
+	iload 5
+;  (143) End NameExpr
+	istore 6
+;  (143) End LocalDecl
+;  (145) Local Variable Declaration
+;  (145) Invocation
+;  (145) Name Expression --
+;  (145) End NameExpr
+;  (145) ArrayAccessExpr
+;  (145) ArrayAccessExpr
+;  (145) Name Expression --
+	aload_0
+;  (145) End NameExpr
+;  (145) Name Expression --
+	iload 5
+;  (145) End NameExpr
+	aaload
+;  (145) End ArrayAccessExpr
+;  (145) Name Expression --
+	iload 5
+;  (145) End NameExpr
+	daload
+;  (145) End ArrayAccessExpr
+	invokestatic Math/abs(D)D
+;  (145) End Invocation
+	dstore 7
+;  (145) End LocalDecl
+;  (146) For Statement
+;  (146) Local Variable Declaration
+;  (146) Binary Expression
+;  (146) Name Expression --
+	iload 5
+;  (146) End NameExpr
+;  (146) Literal
+	iconst_1
+;  (146) End Literal
+	iadd
+;  (146) End BinaryExpr
+	istore 9
+;  (146) End LocalDecl
+L41:
+;  (146) Binary Expression
+;  (146) Name Expression --
+	iload 9
+;  (146) End NameExpr
+;  (146) Name Expression --
+	iload_3
+;  (146) End NameExpr
+	if_icmplt L44
+	iconst_0
+	goto L45
+L44:
+	iconst_1
+L45:
+;  (146) End BinaryExpr
+	ifeq L42
+;  (147) Local Variable Declaration
+;  (147) Invocation
+;  (147) Name Expression --
+;  (147) End NameExpr
+;  (147) ArrayAccessExpr
+;  (147) ArrayAccessExpr
+;  (147) Name Expression --
+	aload_0
+;  (147) End NameExpr
+;  (147) Name Expression --
+	iload 9
+;  (147) End NameExpr
+	aaload
+;  (147) End ArrayAccessExpr
+;  (147) Name Expression --
+	iload 5
+;  (147) End NameExpr
+	daload
+;  (147) End ArrayAccessExpr
+	invokestatic Math/abs(D)D
+;  (147) End Invocation
+	dstore 10
+;  (147) End LocalDecl
+;  (148) If Statement
+;  (148) Binary Expression
+;  (148) Name Expression --
+	dload 10
+;  (148) End NameExpr
+;  (148) Name Expression --
+	dload 7
+;  (148) End NameExpr
+	dcmpg
+	ifgt L47
+	iconst_0
+	goto L48
+L47:
+	iconst_1
+L48:
+;  (148) End BinaryExpr
+	ifeq L46
+;  (149) Expression Statement
+;  (149) Assignment
+;  (149) Name Expression --
+	iload 9
+;  (149) End NameExpr
+	istore 6
+;  (149) End Assignment
+;  (149) End ExprStat
+;  (150) Expression Statement
+;  (150) Assignment
+;  (150) Name Expression --
+	dload 10
+;  (150) End NameExpr
+	dstore 7
+;  (150) End Assignment
+;  (150) End ExprStat
+L46:
+;  (148) End IfStat
+L43:
+;  (146) Expression Statement
+;  (146) Unary Post Expression
+;  (146) Name Expression --
+	iload 9
+;  (146) End NameExpr
+	iinc 9 1
+;  (146) End UnaryPostExpr
+	pop
+;  (146) End ExprStat
+	goto L41
+L42:
+;  (146) End ForStat
+;  (154) Expression Statement
+;  (154) Assignment
+;  (154) ArrayAccessExpr target
+;  (154) Name Expression --
+	aload_1
+;  (154) End NameExpr
+;  (154) ArrayAccessExpr index
+;  (154) Name Expression --
+	iload 5
+;  (154) End NameExpr
+;  (154) Name Expression --
+	iload 6
+;  (154) End NameExpr
+	iastore
+;  (154) End Assignment
+;  (154) End ExprStat
+;  (159) If Statement
+;  (159) Binary Expression
+;  (159) ArrayAccessExpr
+;  (159) ArrayAccessExpr
+;  (159) Name Expression --
+	aload_0
+;  (159) End NameExpr
+;  (159) Name Expression --
+	iload 6
+;  (159) End NameExpr
+	aaload
+;  (159) End ArrayAccessExpr
+;  (159) Name Expression --
+	iload 5
+;  (159) End NameExpr
+	daload
+;  (159) End ArrayAccessExpr
+;  (159) Literal
+	iconst_0
+;  (159) End Literal
+	i2d
+	dcmpg
+	ifeq L50
+	iconst_0
+	goto L51
+L50:
+	iconst_1
+L51:
+;  (159) End BinaryExpr
+	ifeq L49
+;  (160) Return Statement
+;  (160) Literal
+	iconst_1
+;  (160) End Literal
+	ireturn
+;  (160) End ReturnStat
+L49:
+;  (159) End IfStat
+;  (163) If Statement
+;  (163) Binary Expression
+;  (163) Name Expression --
+	iload 6
+;  (163) End NameExpr
+;  (163) Name Expression --
+	iload 5
+;  (163) End NameExpr
+	if_icmpne L53
+	iconst_0
+	goto L54
+L53:
+	iconst_1
+L54:
+;  (163) End BinaryExpr
+	ifeq L52
+;  (165) Local Variable Declaration
+;  (165) ArrayAccessExpr
+;  (165) Name Expression --
+	aload_0
+;  (165) End NameExpr
+;  (165) Name Expression --
+	iload 5
+;  (165) End NameExpr
+	aaload
+;  (165) End ArrayAccessExpr
+	astore 12
+;  (165) End LocalDecl
+;  (166) Expression Statement
+;  (166) Assignment
+;  (166) ArrayAccessExpr target
+;  (166) Name Expression --
+	aload_0
+;  (166) End NameExpr
+;  (166) ArrayAccessExpr index
+;  (166) Name Expression --
+	iload 5
+;  (166) End NameExpr
+;  (166) ArrayAccessExpr
+;  (166) Name Expression --
+	aload_0
+;  (166) End NameExpr
+;  (166) Name Expression --
+	iload 6
+;  (166) End NameExpr
+	aaload
+;  (166) End ArrayAccessExpr
+	aastore
+;  (166) End Assignment
+;  (166) End ExprStat
+;  (167) Expression Statement
+;  (167) Assignment
+;  (167) ArrayAccessExpr target
+;  (167) Name Expression --
+	aload_0
+;  (167) End NameExpr
+;  (167) ArrayAccessExpr index
+;  (167) Name Expression --
+	iload 6
+;  (167) End NameExpr
+;  (167) Name Expression --
+	aload 12
+;  (167) End NameExpr
+	aastore
+;  (167) End Assignment
+;  (167) End ExprStat
+L52:
+;  (163) End IfStat
+;  (170) If Statement
+;  (170) Binary Expression
+;  (170) Name Expression --
+	iload 5
+;  (170) End NameExpr
+;  (170) Binary Expression
+;  (170) Name Expression --
+	iload_3
+;  (170) End NameExpr
+;  (170) Literal
+	iconst_1
+;  (170) End Literal
+	isub
+;  (170) End BinaryExpr
+	if_icmplt L56
+	iconst_0
+	goto L57
+L56:
+	iconst_1
+L57:
+;  (170) End BinaryExpr
+	ifeq L55
+;  (174) Local Variable Declaration
+;  (174) Binary Expression
+;  (174) Literal
+	ldc2_w 1.0
+;  (174) End Literal
+;  (174) ArrayAccessExpr
+;  (174) ArrayAccessExpr
+;  (174) Name Expression --
+	aload_0
+;  (174) End NameExpr
+;  (174) Name Expression --
+	iload 5
+;  (174) End NameExpr
+	aaload
+;  (174) End ArrayAccessExpr
+;  (174) Name Expression --
+	iload 5
+;  (174) End NameExpr
+	daload
+;  (174) End ArrayAccessExpr
+	ddiv
+;  (174) End BinaryExpr
+	dstore 13
+;  (174) End LocalDecl
+;  (176) For Statement
+;  (176) Local Variable Declaration
+;  (176) Binary Expression
+;  (176) Name Expression --
+	iload 5
+;  (176) End NameExpr
+;  (176) Literal
+	iconst_1
+;  (176) End Literal
+	iadd
+;  (176) End BinaryExpr
+	istore 15
+;  (176) End LocalDecl
+L58:
+;  (176) Binary Expression
+;  (176) Name Expression --
+	iload 15
+;  (176) End NameExpr
+;  (176) Name Expression --
+	iload_3
+;  (176) End NameExpr
+	if_icmplt L61
+	iconst_0
+	goto L62
+L61:
+	iconst_1
+L62:
+;  (176) End BinaryExpr
+	ifeq L59
+;  (177) Expression Statement
+;  (177) Assignment
+;  (177) ArrayAccessExpr target
+;  (177) ArrayAccessExpr
+;  (177) Name Expression --
+	aload_0
+;  (177) End NameExpr
+;  (177) Name Expression --
+	iload 15
+;  (177) End NameExpr
+	aaload
+;  (177) End ArrayAccessExpr
+;  (177) ArrayAccessExpr index
+;  (177) Name Expression --
+	iload 5
+;  (177) End NameExpr
+	dup2
+	daload
+;  (177) Name Expression --
+	dload 13
+;  (177) End NameExpr
+	dmul
+	dastore
+;  (177) End Assignment
+;  (177) End ExprStat
+L60:
+;  (176) Expression Statement
+;  (176) Unary Post Expression
+;  (176) Name Expression --
+	iload 15
+;  (176) End NameExpr
+	iinc 15 1
+;  (176) End UnaryPostExpr
+	pop
+;  (176) End ExprStat
+	goto L58
+L59:
+;  (176) End ForStat
+L55:
+;  (170) End IfStat
+;  (181) If Statement
+;  (181) Binary Expression
+;  (181) Name Expression --
+	iload 5
+;  (181) End NameExpr
+;  (181) Binary Expression
+;  (181) Name Expression --
+	iload 4
+;  (181) End NameExpr
+;  (181) Literal
+	iconst_1
+;  (181) End Literal
+	isub
+;  (181) End BinaryExpr
+	if_icmplt L64
+	iconst_0
+	goto L65
+L64:
+	iconst_1
+L65:
+;  (181) End BinaryExpr
+	ifeq L63
+;  (189) For Statement
+;  (189) Local Variable Declaration
+;  (189) Binary Expression
+;  (189) Name Expression --
+	iload 5
+;  (189) End NameExpr
+;  (189) Literal
+	iconst_1
+;  (189) End Literal
+	iadd
+;  (189) End BinaryExpr
+	istore 16
+;  (189) End LocalDecl
+L66:
+;  (189) Binary Expression
+;  (189) Name Expression --
+	iload 16
+;  (189) End NameExpr
+;  (189) Name Expression --
+	iload_3
+;  (189) End NameExpr
+	if_icmplt L69
+	iconst_0
+	goto L70
+L69:
+	iconst_1
+L70:
+;  (189) End BinaryExpr
+	ifeq L67
+;  (190) Local Variable Declaration
+;  (190) ArrayAccessExpr
+;  (190) Name Expression --
+	aload_0
+;  (190) End NameExpr
+;  (190) Name Expression --
+	iload 16
+;  (190) End NameExpr
+	aaload
+;  (190) End ArrayAccessExpr
+	astore 17
+;  (190) End LocalDecl
+;  (191) Local Variable Declaration
+;  (191) ArrayAccessExpr
+;  (191) Name Expression --
+	aload_0
+;  (191) End NameExpr
+;  (191) Name Expression --
+	iload 5
+;  (191) End NameExpr
+	aaload
+;  (191) End ArrayAccessExpr
+	astore 18
+;  (191) End LocalDecl
+;  (192) Local Variable Declaration
+;  (192) ArrayAccessExpr
+;  (192) Name Expression --
+	aload 17
+;  (192) End NameExpr
+;  (192) Name Expression --
+	iload 5
+;  (192) End NameExpr
+	daload
+;  (192) End ArrayAccessExpr
+	dstore 19
+;  (192) End LocalDecl
+;  (193) For Statement
+;  (193) Local Variable Declaration
+;  (193) Binary Expression
+;  (193) Name Expression --
+	iload 5
+;  (193) End NameExpr
+;  (193) Literal
+	iconst_1
+;  (193) End Literal
+	iadd
+;  (193) End BinaryExpr
+	istore 21
+;  (193) End LocalDecl
+L71:
+;  (193) Binary Expression
+;  (193) Name Expression --
+	iload 21
+;  (193) End NameExpr
+;  (193) Name Expression --
+	iload_2
+;  (193) End NameExpr
+	if_icmplt L74
+	iconst_0
+	goto L75
+L74:
+	iconst_1
+L75:
+;  (193) End BinaryExpr
+	ifeq L72
+;  (194) Expression Statement
+;  (194) Assignment
+;  (194) ArrayAccessExpr target
+;  (194) Name Expression --
+	aload 17
+;  (194) End NameExpr
+;  (194) ArrayAccessExpr index
+;  (194) Name Expression --
+	iload 21
+;  (194) End NameExpr
+	dup2
+	daload
+;  (194) Binary Expression
+;  (194) Name Expression --
+	dload 19
+;  (194) End NameExpr
+;  (194) ArrayAccessExpr
+;  (194) Name Expression --
+	aload 18
+;  (194) End NameExpr
+;  (194) Name Expression --
+	iload 21
+;  (194) End NameExpr
+	daload
+;  (194) End ArrayAccessExpr
+	dmul
+;  (194) End BinaryExpr
+	dsub
+	dastore
+;  (194) End Assignment
+;  (194) End ExprStat
+L73:
+;  (193) Expression Statement
+;  (193) Unary Post Expression
+;  (193) Name Expression --
+	iload 21
+;  (193) End NameExpr
+	iinc 21 1
+;  (193) End UnaryPostExpr
+	pop
+;  (193) End ExprStat
+	goto L71
+L72:
+;  (193) End ForStat
+L68:
+;  (189) Expression Statement
+;  (189) Unary Post Expression
+;  (189) Name Expression --
+	iload 16
+;  (189) End NameExpr
+	iinc 16 1
+;  (189) End UnaryPostExpr
+	pop
+;  (189) End ExprStat
+	goto L66
+L67:
+;  (189) End ForStat
+L63:
+;  (181) End IfStat
+L38:
+;  (140) Expression Statement
+;  (140) Unary Post Expression
+;  (140) Name Expression --
+	iload 5
+;  (140) End NameExpr
+	iinc 5 1
+;  (140) End UnaryPostExpr
+	pop
+;  (140) End ExprStat
+	goto L36
+L37:
+;  (140) End ForStat
+;  (200) Return Statement
+;  (200) Literal
+	iconst_0
+;  (200) End Literal
+	ireturn
+;  (200) End ReturnStat
+.end method
+
+.method public static solve([[D[I[D)V
+	.limit stack 50
+	.limit locals 15
+;  (216) Method Declaration (solve)
+;  (217) Local Variable Declaration
+;  (217) Array length
+;  (217) Name Expression --
+	aload_0
+;  (217) End NameExpr
+	arraylength
+	istore_3
+;  (217) End LocalDecl
+;  (218) Local Variable Declaration
+;  (218) Array length
+;  (218) ArrayAccessExpr
+;  (218) Name Expression --
+	aload_0
+;  (218) End NameExpr
+;  (218) Literal
+	iconst_0
+;  (218) End Literal
+	aaload
+;  (218) End ArrayAccessExpr
+	arraylength
+	istore 4
+;  (218) End LocalDecl
+;  (219) Local Variable Declaration
+;  (219) Literal
+	iconst_0
+;  (219) End Literal
+	istore 5
+;  (219) End LocalDecl
+;  (221) For Statement
+;  (221) Local Variable Declaration
+;  (221) Literal
+	iconst_0
+;  (221) End Literal
+	istore 6
+;  (221) End LocalDecl
+L76:
+;  (221) Binary Expression
+;  (221) Name Expression --
+	iload 6
+;  (221) End NameExpr
+;  (221) Name Expression --
+	iload_3
+;  (221) End NameExpr
+	if_icmplt L79
+	iconst_0
+	goto L80
+L79:
+	iconst_1
+L80:
+;  (221) End BinaryExpr
+	ifeq L77
+;  (222) Local Variable Declaration
+;  (222) ArrayAccessExpr
+;  (222) Name Expression --
+	aload_1
+;  (222) End NameExpr
+;  (222) Name Expression --
+	iload 6
+;  (222) End NameExpr
+	iaload
+;  (222) End ArrayAccessExpr
+	istore 7
+;  (222) End LocalDecl
+;  (223) Local Variable Declaration
+;  (223) ArrayAccessExpr
+;  (223) Name Expression --
+	aload_2
+;  (223) End NameExpr
+;  (223) Name Expression --
+	iload 7
+;  (223) End NameExpr
+	daload
+;  (223) End ArrayAccessExpr
+	dstore 8
+;  (223) End LocalDecl
+;  (225) Expression Statement
+;  (225) Assignment
+;  (225) ArrayAccessExpr target
+;  (225) Name Expression --
+	aload_2
+;  (225) End NameExpr
+;  (225) ArrayAccessExpr index
+;  (225) Name Expression --
+	iload 7
+;  (225) End NameExpr
+;  (225) ArrayAccessExpr
+;  (225) Name Expression --
+	aload_2
+;  (225) End NameExpr
+;  (225) Name Expression --
+	iload 6
+;  (225) End NameExpr
+	daload
+;  (225) End ArrayAccessExpr
+	dastore
+;  (225) End Assignment
+;  (225) End ExprStat
+;  (226) If Statement
+;  (226) Binary Expression
+;  (226) Name Expression --
+	iload 5
+;  (226) End NameExpr
+;  (226) Literal
+	iconst_0
+;  (226) End Literal
+	if_icmpeq L83
+	iconst_0
+	goto L84
+L83:
+	iconst_1
+L84:
+;  (226) End BinaryExpr
+	ifeq L81
+;  (227) For Statement
+;  (227) Local Variable Declaration
+;  (227) Name Expression --
+	iload 5
+;  (227) End NameExpr
+	istore 10
+;  (227) End LocalDecl
+L85:
+;  (227) Binary Expression
+;  (227) Name Expression --
+	iload 10
+;  (227) End NameExpr
+;  (227) Name Expression --
+	iload 6
+;  (227) End NameExpr
+	if_icmplt L88
+	iconst_0
+	goto L89
+L88:
+	iconst_1
+L89:
+;  (227) End BinaryExpr
+	ifeq L86
+;  (228) Expression Statement
+;  (228) Assignment
+	dload 8
+;  (228) Binary Expression
+;  (228) ArrayAccessExpr
+;  (228) ArrayAccessExpr
+;  (228) Name Expression --
+	aload_0
+;  (228) End NameExpr
+;  (228) Name Expression --
+	iload 6
+;  (228) End NameExpr
+	aaload
+;  (228) End ArrayAccessExpr
+;  (228) Name Expression --
+	iload 10
+;  (228) End NameExpr
+	daload
+;  (228) End ArrayAccessExpr
+;  (228) ArrayAccessExpr
+;  (228) Name Expression --
+	aload_2
+;  (228) End NameExpr
+;  (228) Name Expression --
+	iload 10
+;  (228) End NameExpr
+	daload
+;  (228) End ArrayAccessExpr
+	dmul
+;  (228) End BinaryExpr
+	dsub
+	dstore 8
+;  (228) End Assignment
+;  (228) End ExprStat
+L87:
+;  (227) Expression Statement
+;  (227) Unary Post Expression
+;  (227) Name Expression --
+	iload 10
+;  (227) End NameExpr
+	iinc 10 1
+;  (227) End UnaryPostExpr
+	pop
+;  (227) End ExprStat
+	goto L85
+L86:
+;  (227) End ForStat
+	goto L82
+L81:
+;  (230) If Statement
+;  (230) Binary Expression
+;  (230) Name Expression --
+	dload 8
+;  (230) End NameExpr
+;  (230) Literal
+	ldc2_w 0.0
+;  (230) End Literal
+	dcmpg
+	ifeq L91
+	iconst_0
+	goto L92
+L91:
+	iconst_1
+L92:
+;  (230) End BinaryExpr
+	ifeq L90
+;  (231) Expression Statement
+;  (231) Assignment
+;  (231) Name Expression --
+	iload 6
+;  (231) End NameExpr
+	istore 5
+;  (231) End Assignment
+;  (231) End ExprStat
+L90:
+;  (230) End IfStat
+L82:
+;  (226) End IfStat
+;  (232) Expression Statement
+;  (232) Assignment
+;  (232) ArrayAccessExpr target
+;  (232) Name Expression --
+	aload_2
+;  (232) End NameExpr
+;  (232) ArrayAccessExpr index
+;  (232) Name Expression --
+	iload 6
+;  (232) End NameExpr
+;  (232) Name Expression --
+	dload 8
+;  (232) End NameExpr
+	dastore
+;  (232) End Assignment
+;  (232) End ExprStat
+L78:
+;  (221) Expression Statement
+;  (221) Unary Post Expression
+;  (221) Name Expression --
+	iload 6
+;  (221) End NameExpr
+	iinc 6 1
+;  (221) End UnaryPostExpr
+	pop
+;  (221) End ExprStat
+	goto L76
+L77:
+;  (221) End ForStat
+;  (235) For Statement
+;  (235) Local Variable Declaration
+;  (235) Binary Expression
+;  (235) Name Expression --
+	iload 4
+;  (235) End NameExpr
+;  (235) Literal
+	iconst_1
+;  (235) End Literal
+	isub
+;  (235) End BinaryExpr
+	istore 11
+;  (235) End LocalDecl
+L93:
+;  (235) Binary Expression
+;  (235) Name Expression --
+	iload 11
+;  (235) End NameExpr
+;  (235) Literal
+	iconst_0
+;  (235) End Literal
+	if_icmpge L96
+	iconst_0
+	goto L97
+L96:
+	iconst_1
+L97:
+;  (235) End BinaryExpr
+	ifeq L94
+;  (236) Local Variable Declaration
+;  (236) ArrayAccessExpr
+;  (236) Name Expression --
+	aload_2
+;  (236) End NameExpr
+;  (236) Name Expression --
+	iload 11
+;  (236) End NameExpr
+	daload
+;  (236) End ArrayAccessExpr
+	dstore 12
+;  (236) End LocalDecl
+;  (237) For Statement
+;  (237) Local Variable Declaration
+;  (237) Binary Expression
+;  (237) Name Expression --
+	iload 11
+;  (237) End NameExpr
+;  (237) Literal
+	iconst_1
+;  (237) End Literal
+	iadd
+;  (237) End BinaryExpr
+	istore 14
+;  (237) End LocalDecl
+L98:
+;  (237) Binary Expression
+;  (237) Name Expression --
+	iload 14
+;  (237) End NameExpr
+;  (237) Name Expression --
+	iload 4
+;  (237) End NameExpr
+	if_icmplt L101
+	iconst_0
+	goto L102
+L101:
+	iconst_1
+L102:
+;  (237) End BinaryExpr
+	ifeq L99
+;  (238) Expression Statement
+;  (238) Assignment
+	dload 12
+;  (238) Binary Expression
+;  (238) ArrayAccessExpr
+;  (238) ArrayAccessExpr
+;  (238) Name Expression --
+	aload_0
+;  (238) End NameExpr
+;  (238) Name Expression --
+	iload 11
+;  (238) End NameExpr
+	aaload
+;  (238) End ArrayAccessExpr
+;  (238) Name Expression --
+	iload 14
+;  (238) End NameExpr
+	daload
+;  (238) End ArrayAccessExpr
+;  (238) ArrayAccessExpr
+;  (238) Name Expression --
+	aload_2
+;  (238) End NameExpr
+;  (238) Name Expression --
+	iload 14
+;  (238) End NameExpr
+	daload
+;  (238) End ArrayAccessExpr
+	dmul
+;  (238) End BinaryExpr
+	dsub
+	dstore 12
+;  (238) End Assignment
+;  (238) End ExprStat
+L100:
+;  (237) Expression Statement
+;  (237) Unary Post Expression
+;  (237) Name Expression --
+	iload 14
+;  (237) End NameExpr
+	iinc 14 1
+;  (237) End UnaryPostExpr
+	pop
+;  (237) End ExprStat
+	goto L98
+L99:
+;  (237) End ForStat
+;  (239) Expression Statement
+;  (239) Assignment
+;  (239) ArrayAccessExpr target
+;  (239) Name Expression --
+	aload_2
+;  (239) End NameExpr
+;  (239) ArrayAccessExpr index
+;  (239) Name Expression --
+	iload 11
+;  (239) End NameExpr
+;  (239) Binary Expression
+;  (239) Name Expression --
+	dload 12
+;  (239) End NameExpr
+;  (239) ArrayAccessExpr
+;  (239) ArrayAccessExpr
+;  (239) Name Expression --
+	aload_0
+;  (239) End NameExpr
+;  (239) Name Expression --
+	iload 11
+;  (239) End NameExpr
+	aaload
+;  (239) End ArrayAccessExpr
+;  (239) Name Expression --
+	iload 11
+;  (239) End NameExpr
+	daload
+;  (239) End ArrayAccessExpr
+	ddiv
+;  (239) End BinaryExpr
+	dastore
+;  (239) End Assignment
+;  (239) End ExprStat
+L95:
+;  (235) Expression Statement
+;  (235) Unary Post Expression
+;  (235) Name Expression --
+	iload 11
+;  (235) End NameExpr
+	iinc 11 -1
+;  (235) End UnaryPostExpr
+	pop
+;  (235) End ExprStat
+	goto L93
+L94:
+;  (235) End ForStat
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 50
+	.limit locals 6
+;  (248) Method Declaration (main)
+;  (249) Local Variable Declaration
+;  (249) NewArray
+;  (249) ArrayLiteral
+	iconst_4
+	anewarray [D
+	dup
+	iconst_0
+;  (249) ArrayLiteral
+	iconst_4
+	newarray double
+	dup
+	iconst_0
+;  (249) Literal
+	ldc2_w 1.0
+;  (249) End Literal
+	dastore
+	dup
+	iconst_1
+;  (249) Literal
+	ldc2_w 2.0
+;  (249) End Literal
+	dastore
+	dup
+	iconst_2
+;  (249) Literal
+	ldc2_w 3.0
+;  (249) End Literal
+	dastore
+	dup
+	iconst_3
+;  (249) Literal
+	ldc2_w 4.0
+;  (249) End Literal
+	dastore
+;  (249) End ArrayLiteral
+	aastore
+	dup
+	iconst_1
+;  (250) ArrayLiteral
+	iconst_4
+	newarray double
+	dup
+	iconst_0
+;  (250) Literal
+	ldc2_w 4.0
+;  (250) End Literal
+	dastore
+	dup
+	iconst_1
+;  (250) Literal
+	ldc2_w 3.0
+;  (250) End Literal
+	dastore
+	dup
+	iconst_2
+;  (250) Literal
+	ldc2_w 2.0
+;  (250) End Literal
+	dastore
+	dup
+	iconst_3
+;  (250) Literal
+	ldc2_w 1.0
+;  (250) End Literal
+	dastore
+;  (250) End ArrayLiteral
+	aastore
+	dup
+	iconst_2
+;  (251) ArrayLiteral
+	iconst_4
+	newarray double
+	dup
+	iconst_0
+;  (251) Literal
+	ldc2_w 3.0
+;  (251) End Literal
+	dastore
+	dup
+	iconst_1
+;  (251) Literal
+	ldc2_w 4.0
+;  (251) End Literal
+	dastore
+	dup
+	iconst_2
+;  (251) Literal
+	ldc2_w 1.0
+;  (251) End Literal
+	dastore
+	dup
+	iconst_3
+;  (251) Literal
+	ldc2_w 2.0
+;  (251) End Literal
+	dastore
+;  (251) End ArrayLiteral
+	aastore
+	dup
+	iconst_3
+;  (252) ArrayLiteral
+	iconst_4
+	newarray double
+	dup
+	iconst_0
+;  (252) Literal
+	ldc2_w 2.0
+;  (252) End Literal
+	dastore
+	dup
+	iconst_1
+;  (252) Literal
+	ldc2_w 3.0
+;  (252) End Literal
+	dastore
+	dup
+	iconst_2
+;  (252) Literal
+	ldc2_w 4.0
+;  (252) End Literal
+	dastore
+	dup
+	iconst_3
+;  (252) Literal
+	ldc2_w 1.0
+;  (252) End Literal
+	dastore
+;  (252) End ArrayLiteral
+	aastore
+;  (249) End ArrayLiteral
+;  (249) End NewArray
+	astore_1
+;  (249) End LocalDecl
+;  (254) Local Variable Declaration
+;  (254) New
+	new LU
+	dup
+;  (254) Name Expression --
+	aload_1
+;  (254) End NameExpr
+	invokespecial LU/<init>([[D)V
+;  (254) End New
+	astore_2
+;  (254) End LocalDecl
+;  (255) Local Variable Declaration
+;  (255) Invocation
+;  (255) Name Expression --
+	aload_2
+;  (255) End NameExpr
+	invokevirtual LU/getLU()[[D
+;  (255) End Invocation
+	astore_3
+;  (255) End LocalDecl
+;  (256) For Statement
+;  (256) Local Variable Declaration
+;  (256) Literal
+	iconst_0
+;  (256) End Literal
+	istore 4
+;  (256) End LocalDecl
+L103:
+;  (256) Binary Expression
+;  (256) Name Expression --
+	iload 4
+;  (256) End NameExpr
+;  (256) Array length
+;  (256) Name Expression --
+	aload_1
+;  (256) End NameExpr
+	arraylength
+	if_icmplt L106
+	iconst_0
+	goto L107
+L106:
+	iconst_1
+L107:
+;  (256) End BinaryExpr
+	ifeq L104
+;  (257) For Statement
+;  (257) Local Variable Declaration
+;  (257) Literal
+	iconst_0
+;  (257) End Literal
+	istore 5
+;  (257) End LocalDecl
+L108:
+;  (257) Binary Expression
+;  (257) Name Expression --
+	iload 5
+;  (257) End NameExpr
+;  (257) Array length
+;  (257) Name Expression --
+	aload_1
+;  (257) End NameExpr
+	arraylength
+	if_icmplt L111
+	iconst_0
+	goto L112
+L111:
+	iconst_1
+L112:
+;  (257) End BinaryExpr
+	ifeq L109
+;  (258) Expression Statement
+;  (258) Invocation
+;  (258) Field Reference
+;  (258) Name Expression --
+;  (258) End NameExpr
+	getstatic System/out LIo;
+;  (258) End FieldRef
+	pop
+;  (258) ArrayAccessExpr
+;  (258) ArrayAccessExpr
+;  (258) Name Expression --
+	aload_3
+;  (258) End NameExpr
+;  (258) Name Expression --
+	iload 4
+;  (258) End NameExpr
+	aaload
+;  (258) End ArrayAccessExpr
+;  (258) Name Expression --
+	iload 5
+;  (258) End NameExpr
+	daload
+;  (258) End ArrayAccessExpr
+	invokestatic Io/print(D)V
+;  (258) End Invocation
+;  (258) End ExprStat
+;  (259) Expression Statement
+;  (259) Invocation
+;  (259) Field Reference
+;  (259) Name Expression --
+;  (259) End NameExpr
+	getstatic System/out LIo;
+;  (259) End FieldRef
+	pop
+;  (259) Literal
+	ldc "  "
+;  (259) End Literal
+	invokestatic Io/print(Ljava/lang/String;)V
+;  (259) End Invocation
+;  (259) End ExprStat
+L110:
+;  (257) Expression Statement
+;  (257) Unary Post Expression
+;  (257) Name Expression --
+	iload 5
+;  (257) End NameExpr
+	iinc 5 1
+;  (257) End UnaryPostExpr
+	pop
+;  (257) End ExprStat
+	goto L108
+L109:
+;  (257) End ForStat
+;  (261) Expression Statement
+;  (261) Invocation
+;  (261) Field Reference
+;  (261) Name Expression --
+;  (261) End NameExpr
+	getstatic System/out LIo;
+;  (261) End FieldRef
+	pop
+;  (261) Literal
+	ldc ""
+;  (261) End Literal
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (261) End Invocation
+;  (261) End ExprStat
+L105:
+;  (256) Expression Statement
+;  (256) Unary Post Expression
+;  (256) Name Expression --
+	iload 4
+;  (256) End NameExpr
+	iinc 4 1
+;  (256) End UnaryPostExpr
+	pop
+;  (256) End ExprStat
+	goto L103
+L104:
+;  (256) End ForStat
+	return
+.end method
+

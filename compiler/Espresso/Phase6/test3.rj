@@ -1,0 +1,44 @@
+.class public test3
+.super java/lang/Object
+
+.field public c I
+
+.method public t1()I
+	.limit stack 50
+	.limit locals 1
+;  (20) Method Declaration (t1)
+;  (20) Expression Statement
+;  (20) Assignment
+;  (20) This
+	aload_0
+;  (20) End This
+;  (20) Literal
+	bipush 11
+;  (20) End Literal
+	putfield test3/c I
+;  (20) End Assignment
+;  (20) End ExprStat
+;  (20) Return Statement
+;  (20) Field Reference
+;  (20) This
+	aload_0
+;  (20) End This
+	getfield test3/c I
+;  (20) End FieldRef
+	ireturn
+;  (20) End ReturnStat
+.end method
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (0) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (0) Field Init Generation Start
+;  (0) Field Init Generation End
+	return
+.end method
+

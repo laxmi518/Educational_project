@@ -1,0 +1,300 @@
+.class public IntVector
+.super java/lang/Object
+
+.field public value I
+
+.field public next_element LIntVector;
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (68) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (68) Field Init Generation Start
+	aload_0
+;  (66) Literal
+	aconst_null
+;  (66) End Literal
+	putfield IntVector/next_element LIntVector;
+;  (68) Field Init Generation End
+	return
+.end method
+
+.method public <init>(I)V
+	.limit stack 50
+	.limit locals 2
+;  (70) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+;  (0) End CInvocation
+;  (70) Field Init Generation Start
+	aload_0
+;  (66) Literal
+	aconst_null
+;  (66) End Literal
+	putfield IntVector/next_element LIntVector;
+;  (70) Field Init Generation End
+;  (71) If Statement
+;  (71) Binary Expression
+;  (71) Name Expression --
+	iload_1
+;  (71) End NameExpr
+;  (71) Literal
+	iconst_0
+;  (71) End Literal
+	if_icmpne L2
+	iconst_0
+	goto L3
+L2:
+	iconst_1
+L3:
+;  (71) End BinaryExpr
+	ifeq L1
+;  (72) Expression Statement
+;  (72) Assignment
+;  (72) This
+	aload_0
+;  (72) End This
+;  (72) New
+	new IntVector
+	dup
+;  (72) Binary Expression
+;  (72) Name Expression --
+	iload_1
+;  (72) End NameExpr
+;  (72) Literal
+	iconst_1
+;  (72) End Literal
+	isub
+;  (72) End BinaryExpr
+	invokespecial IntVector/<init>(I)V
+;  (72) End New
+	putfield IntVector/next_element LIntVector;
+;  (72) End Assignment
+;  (72) End ExprStat
+L1:
+;  (71) End IfStat
+	return
+.end method
+
+.method public get(I)I
+	.limit stack 50
+	.limit locals 2
+;  (75) Method Declaration (get)
+;  (76) If Statement
+;  (76) Binary Expression
+;  (76) Name Expression --
+	iload_1
+;  (76) End NameExpr
+;  (76) Literal
+	iconst_0
+;  (76) End Literal
+	if_icmpeq L6
+	iconst_0
+	goto L7
+L6:
+	iconst_1
+L7:
+;  (76) End BinaryExpr
+	ifeq L4
+;  (77) Return Statement
+;  (77) Field Reference
+;  (77) This
+	aload_0
+;  (77) End This
+	getfield IntVector/value I
+;  (77) End FieldRef
+	ireturn
+;  (77) End ReturnStat
+	goto L5
+L4:
+;  (79) Return Statement
+;  (79) Invocation
+;  (79) Field Reference
+;  (79) This
+	aload_0
+;  (79) End This
+	getfield IntVector/next_element LIntVector;
+;  (79) End FieldRef
+;  (79) Binary Expression
+;  (79) Name Expression --
+	iload_1
+;  (79) End NameExpr
+;  (79) Literal
+	iconst_1
+;  (79) End Literal
+	isub
+;  (79) End BinaryExpr
+	invokevirtual IntVector/get(I)I
+;  (79) End Invocation
+	ireturn
+;  (79) End ReturnStat
+L5:
+;  (76) End IfStat
+	iconst_0
+	ireturn
+.end method
+
+.method public put(II)V
+	.limit stack 50
+	.limit locals 3
+;  (82) Method Declaration (put)
+;  (83) If Statement
+;  (83) Binary Expression
+;  (83) Name Expression --
+	iload_1
+;  (83) End NameExpr
+;  (83) Literal
+	iconst_0
+;  (83) End Literal
+	if_icmpeq L10
+	iconst_0
+	goto L11
+L10:
+	iconst_1
+L11:
+;  (83) End BinaryExpr
+	ifeq L8
+;  (84) Expression Statement
+;  (84) Assignment
+;  (84) This
+	aload_0
+;  (84) End This
+;  (84) Name Expression --
+	iload_2
+;  (84) End NameExpr
+	putfield IntVector/value I
+;  (84) End Assignment
+;  (84) End ExprStat
+	goto L9
+L8:
+;  (86) If Statement
+;  (86) Binary Expression
+;  (86) Field Reference
+;  (86) This
+	aload_0
+;  (86) End This
+	getfield IntVector/next_element LIntVector;
+;  (86) End FieldRef
+;  (86) Literal
+	aconst_null
+;  (86) End Literal
+	if_acmpeq L13
+	iconst_0
+	goto L14
+L13:
+	iconst_1
+L14:
+;  (86) End BinaryExpr
+	ifeq L12
+;  (87) Expression Statement
+;  (87) Assignment
+;  (87) This
+	aload_0
+;  (87) End This
+;  (87) New
+	new IntVector
+	dup
+;  (87) Binary Expression
+;  (87) Name Expression --
+	iload_1
+;  (87) End NameExpr
+;  (87) Literal
+	iconst_1
+;  (87) End Literal
+	isub
+;  (87) End BinaryExpr
+	invokespecial IntVector/<init>(I)V
+;  (87) End New
+	putfield IntVector/next_element LIntVector;
+;  (87) End Assignment
+;  (87) End ExprStat
+L12:
+;  (86) End IfStat
+;  (89) Expression Statement
+;  (89) Invocation
+;  (89) Field Reference
+;  (89) This
+	aload_0
+;  (89) End This
+	getfield IntVector/next_element LIntVector;
+;  (89) End FieldRef
+;  (89) Binary Expression
+;  (89) Name Expression --
+	iload_1
+;  (89) End NameExpr
+;  (89) Literal
+	iconst_1
+;  (89) End Literal
+	isub
+;  (89) End BinaryExpr
+;  (89) Name Expression --
+	iload_2
+;  (89) End NameExpr
+	invokevirtual IntVector/put(II)V
+;  (89) End Invocation
+;  (89) End ExprStat
+L9:
+;  (83) End IfStat
+	return
+.end method
+
+.method public size()I
+	.limit stack 50
+	.limit locals 1
+;  (93) Method Declaration (size)
+;  (94) If Statement
+;  (94) Binary Expression
+;  (94) Field Reference
+;  (94) This
+	aload_0
+;  (94) End This
+	getfield IntVector/next_element LIntVector;
+;  (94) End FieldRef
+;  (94) Literal
+	aconst_null
+;  (94) End Literal
+	if_acmpeq L17
+	iconst_0
+	goto L18
+L17:
+	iconst_1
+L18:
+;  (94) End BinaryExpr
+	ifeq L15
+;  (95) Return Statement
+;  (95) Literal
+	iconst_0
+;  (95) End Literal
+	ireturn
+;  (95) End ReturnStat
+	goto L16
+L15:
+;  (97) Return Statement
+;  (97) Binary Expression
+;  (97) Literal
+	iconst_1
+;  (97) End Literal
+;  (97) Invocation
+;  (97) Field Reference
+;  (97) This
+	aload_0
+;  (97) End This
+	getfield IntVector/next_element LIntVector;
+;  (97) End FieldRef
+	invokevirtual IntVector/size()I
+;  (97) End Invocation
+	iadd
+;  (97) End BinaryExpr
+	ireturn
+;  (97) End ReturnStat
+L16:
+;  (94) End IfStat
+	iconst_0
+	ireturn
+.end method
+

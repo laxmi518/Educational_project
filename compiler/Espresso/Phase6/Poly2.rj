@@ -1,0 +1,1436 @@
+.class public Poly2
+.super Poly
+
+.field private a D
+
+.field private b D
+
+.field private c D
+
+.method public <init>(DDD)V
+	.limit stack 50
+	.limit locals 7
+;  (360) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial Poly/<init>()V
+;  (0) End CInvocation
+;  (360) Field Init Generation Start
+;  (360) Field Init Generation End
+;  (361) Expression Statement
+;  (361) Assignment
+;  (361) This
+	aload_0
+;  (361) End This
+;  (361) Name Expression --
+	dload_1
+;  (361) End NameExpr
+	putfield Poly2/a D
+;  (361) End Assignment
+;  (361) End ExprStat
+;  (362) Expression Statement
+;  (362) Assignment
+;  (362) This
+	aload_0
+;  (362) End This
+;  (362) Name Expression --
+	dload_3
+;  (362) End NameExpr
+	putfield Poly2/b D
+;  (362) End Assignment
+;  (362) End ExprStat
+;  (363) Expression Statement
+;  (363) Assignment
+;  (363) This
+	aload_0
+;  (363) End This
+;  (363) Name Expression --
+	dload 5
+;  (363) End NameExpr
+	putfield Poly2/c D
+;  (363) End Assignment
+;  (363) End ExprStat
+	return
+.end method
+
+.method public get_a()D
+	.limit stack 50
+	.limit locals 1
+;  (366) Method Declaration (get_a)
+;  (367) Return Statement
+;  (367) Field Reference
+;  (367) This
+	aload_0
+;  (367) End This
+	getfield Poly2/a D
+;  (367) End FieldRef
+	dreturn
+;  (367) End ReturnStat
+.end method
+
+.method public get_b()D
+	.limit stack 50
+	.limit locals 1
+;  (369) Method Declaration (get_b)
+;  (370) Return Statement
+;  (370) Field Reference
+;  (370) This
+	aload_0
+;  (370) End This
+	getfield Poly2/b D
+;  (370) End FieldRef
+	dreturn
+;  (370) End ReturnStat
+.end method
+
+.method public get_c()D
+	.limit stack 50
+	.limit locals 1
+;  (372) Method Declaration (get_c)
+;  (373) Return Statement
+;  (373) Field Reference
+;  (373) This
+	aload_0
+;  (373) End This
+	getfield Poly2/c D
+;  (373) End FieldRef
+	dreturn
+;  (373) End ReturnStat
+.end method
+
+.method public evaluate(D)D
+	.limit stack 50
+	.limit locals 3
+;  (376) Method Declaration (evaluate)
+;  (377) Return Statement
+;  (377) Binary Expression
+;  (377) Binary Expression
+;  (377) Binary Expression
+;  (377) Binary Expression
+;  (377) Field Reference
+;  (377) This
+	aload_0
+;  (377) End This
+	getfield Poly2/a D
+;  (377) End FieldRef
+;  (377) Name Expression --
+	dload_1
+;  (377) End NameExpr
+	dmul
+;  (377) End BinaryExpr
+;  (377) Name Expression --
+	dload_1
+;  (377) End NameExpr
+	dmul
+;  (377) End BinaryExpr
+;  (377) Binary Expression
+;  (377) Field Reference
+;  (377) This
+	aload_0
+;  (377) End This
+	getfield Poly2/b D
+;  (377) End FieldRef
+;  (377) Name Expression --
+	dload_1
+;  (377) End NameExpr
+	dmul
+;  (377) End BinaryExpr
+	dadd
+;  (377) End BinaryExpr
+;  (377) Field Reference
+;  (377) This
+	aload_0
+;  (377) End This
+	getfield Poly2/c D
+;  (377) End FieldRef
+	dadd
+;  (377) End BinaryExpr
+	dreturn
+;  (377) End ReturnStat
+.end method
+
+.method public no_real_roots()I
+	.limit stack 50
+	.limit locals 3
+;  (380) Method Declaration (no_real_roots)
+;  (381) Local Variable Declaration
+;  (381) Binary Expression
+;  (381) Binary Expression
+;  (381) Field Reference
+;  (381) This
+	aload_0
+;  (381) End This
+	getfield Poly2/b D
+;  (381) End FieldRef
+;  (381) Field Reference
+;  (381) This
+	aload_0
+;  (381) End This
+	getfield Poly2/b D
+;  (381) End FieldRef
+	dmul
+;  (381) End BinaryExpr
+;  (381) Binary Expression
+;  (381) Binary Expression
+;  (381) Literal
+	iconst_4
+;  (381) End Literal
+	i2d
+;  (381) Field Reference
+;  (381) This
+	aload_0
+;  (381) End This
+	getfield Poly2/a D
+;  (381) End FieldRef
+	dmul
+;  (381) End BinaryExpr
+;  (381) Field Reference
+;  (381) This
+	aload_0
+;  (381) End This
+	getfield Poly2/c D
+;  (381) End FieldRef
+	dmul
+;  (381) End BinaryExpr
+	dsub
+;  (381) End BinaryExpr
+	dstore_1
+;  (381) End LocalDecl
+;  (382) If Statement
+;  (382) Binary Expression
+;  (382) Name Expression --
+	dload_1
+;  (382) End NameExpr
+;  (382) Literal
+	iconst_0
+;  (382) End Literal
+	i2d
+	dcmpg
+	iflt L3
+	iconst_0
+	goto L4
+L3:
+	iconst_1
+L4:
+;  (382) End BinaryExpr
+	ifeq L1
+;  (383) Return Statement
+;  (383) Literal
+	iconst_0
+;  (383) End Literal
+	ireturn
+;  (383) End ReturnStat
+	goto L2
+L1:
+;  (384) If Statement
+;  (384) Binary Expression
+;  (384) Name Expression --
+	dload_1
+;  (384) End NameExpr
+;  (384) Literal
+	iconst_0
+;  (384) End Literal
+	i2d
+	dcmpg
+	ifeq L7
+	iconst_0
+	goto L8
+L7:
+	iconst_1
+L8:
+;  (384) End BinaryExpr
+	ifeq L5
+;  (385) Return Statement
+;  (385) Literal
+	iconst_1
+;  (385) End Literal
+	ireturn
+;  (385) End ReturnStat
+	goto L6
+L5:
+;  (387) Return Statement
+;  (387) Literal
+	iconst_2
+;  (387) End Literal
+	ireturn
+;  (387) End ReturnStat
+L6:
+;  (384) End IfStat
+L2:
+;  (382) End IfStat
+	iconst_0
+	ireturn
+.end method
+
+.method public root1()D
+	.limit stack 50
+	.limit locals 3
+;  (390) Method Declaration (root1)
+;  (391) Local Variable Declaration
+;  (391) Binary Expression
+;  (391) Binary Expression
+;  (391) Field Reference
+;  (391) This
+	aload_0
+;  (391) End This
+	getfield Poly2/b D
+;  (391) End FieldRef
+;  (391) Field Reference
+;  (391) This
+	aload_0
+;  (391) End This
+	getfield Poly2/b D
+;  (391) End FieldRef
+	dmul
+;  (391) End BinaryExpr
+;  (391) Binary Expression
+;  (391) Binary Expression
+;  (391) Literal
+	iconst_4
+;  (391) End Literal
+	i2d
+;  (391) Field Reference
+;  (391) This
+	aload_0
+;  (391) End This
+	getfield Poly2/a D
+;  (391) End FieldRef
+	dmul
+;  (391) End BinaryExpr
+;  (391) Field Reference
+;  (391) This
+	aload_0
+;  (391) End This
+	getfield Poly2/c D
+;  (391) End FieldRef
+	dmul
+;  (391) End BinaryExpr
+	dsub
+;  (391) End BinaryExpr
+	dstore_1
+;  (391) End LocalDecl
+;  (392) Return Statement
+;  (392) Binary Expression
+;  (392) Binary Expression
+;  (392) Unary Pre Expression
+;  (392) Field Reference
+;  (392) This
+	aload_0
+;  (392) End This
+	getfield Poly2/b D
+;  (392) End FieldRef
+	dneg
+;  (392) End UnaryPreExpr
+;  (392) Invocation
+;  (392) Name Expression --
+;  (392) End NameExpr
+;  (392) Name Expression --
+	dload_1
+;  (392) End NameExpr
+	invokestatic Math/sqrt(D)D
+;  (392) End Invocation
+	dadd
+;  (392) End BinaryExpr
+;  (392) Binary Expression
+;  (392) Literal
+	iconst_2
+;  (392) End Literal
+	i2d
+;  (392) Field Reference
+;  (392) This
+	aload_0
+;  (392) End This
+	getfield Poly2/a D
+;  (392) End FieldRef
+	dmul
+;  (392) End BinaryExpr
+	ddiv
+;  (392) End BinaryExpr
+	dreturn
+;  (392) End ReturnStat
+.end method
+
+.method public root2()D
+	.limit stack 50
+	.limit locals 3
+;  (395) Method Declaration (root2)
+;  (396) Local Variable Declaration
+;  (396) Binary Expression
+;  (396) Binary Expression
+;  (396) Field Reference
+;  (396) This
+	aload_0
+;  (396) End This
+	getfield Poly2/b D
+;  (396) End FieldRef
+;  (396) Field Reference
+;  (396) This
+	aload_0
+;  (396) End This
+	getfield Poly2/b D
+;  (396) End FieldRef
+	dmul
+;  (396) End BinaryExpr
+;  (396) Binary Expression
+;  (396) Binary Expression
+;  (396) Literal
+	iconst_4
+;  (396) End Literal
+	i2d
+;  (396) Field Reference
+;  (396) This
+	aload_0
+;  (396) End This
+	getfield Poly2/a D
+;  (396) End FieldRef
+	dmul
+;  (396) End BinaryExpr
+;  (396) Field Reference
+;  (396) This
+	aload_0
+;  (396) End This
+	getfield Poly2/c D
+;  (396) End FieldRef
+	dmul
+;  (396) End BinaryExpr
+	dsub
+;  (396) End BinaryExpr
+	dstore_1
+;  (396) End LocalDecl
+;  (397) Return Statement
+;  (397) Binary Expression
+;  (397) Binary Expression
+;  (397) Unary Pre Expression
+;  (397) Field Reference
+;  (397) This
+	aload_0
+;  (397) End This
+	getfield Poly2/b D
+;  (397) End FieldRef
+	dneg
+;  (397) End UnaryPreExpr
+;  (397) Invocation
+;  (397) Name Expression --
+;  (397) End NameExpr
+;  (397) Name Expression --
+	dload_1
+;  (397) End NameExpr
+	invokestatic Math/sqrt(D)D
+;  (397) End Invocation
+	dsub
+;  (397) End BinaryExpr
+;  (397) Binary Expression
+;  (397) Literal
+	iconst_2
+;  (397) End Literal
+	i2d
+;  (397) Field Reference
+;  (397) This
+	aload_0
+;  (397) End This
+	getfield Poly2/a D
+;  (397) End FieldRef
+	dmul
+;  (397) End BinaryExpr
+	ddiv
+;  (397) End BinaryExpr
+	dreturn
+;  (397) End ReturnStat
+.end method
+
+.method public toString()Ljava/lang/String;
+	.limit stack 50
+	.limit locals 1
+;  (400) Method Declaration (toString)
+;  (401) Return Statement
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Binary Expression
+;  (401) Binary Expression
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/a D
+;  (401) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+;  (401) Literal
+	ldc "x^2"
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) End BinaryExpr
+;  (401) Ternary Statement
+;  (401) Binary Expression
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/b D
+;  (401) End FieldRef
+;  (401) Literal
+	iconst_0
+;  (401) End Literal
+	i2d
+	dcmpg
+	ifne L11
+	iconst_0
+	goto L12
+L11:
+	iconst_1
+L12:
+;  (401) End BinaryExpr
+	ifeq L9
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Ternary Statement
+;  (401) Binary Expression
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/b D
+;  (401) End FieldRef
+;  (401) Literal
+	iconst_0
+;  (401) End Literal
+	i2d
+	dcmpg
+	iflt L15
+	iconst_0
+	goto L16
+L15:
+	iconst_1
+L16:
+;  (401) End BinaryExpr
+	ifeq L13
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Literal
+	ldc " - "
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) Binary Expression
+;  (401) Unary Pre Expression
+;  (401) Literal
+	iconst_1
+;  (401) End Literal
+	ineg
+;  (401) End UnaryPreExpr
+	i2d
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/b D
+;  (401) End FieldRef
+	dmul
+;  (401) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+	goto L14
+L13:
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Literal
+	ldc " + "
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/b D
+;  (401) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+L14:
+;  (401) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) Literal
+	ldc "x"
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+	goto L10
+L9:
+;  (401) Literal
+	ldc ""
+;  (401) End Literal
+L10:
+;  (401) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) End BinaryExpr
+;  (401) Ternary Statement
+;  (401) Binary Expression
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/c D
+;  (401) End FieldRef
+;  (401) Literal
+	iconst_0
+;  (401) End Literal
+	i2d
+	dcmpg
+	ifne L19
+	iconst_0
+	goto L20
+L19:
+	iconst_1
+L20:
+;  (401) End BinaryExpr
+	ifeq L17
+;  (401) Ternary Statement
+;  (401) Binary Expression
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/c D
+;  (401) End FieldRef
+;  (401) Literal
+	iconst_0
+;  (401) End Literal
+	i2d
+	dcmpg
+	iflt L23
+	iconst_0
+	goto L24
+L23:
+	iconst_1
+L24:
+;  (401) End BinaryExpr
+	ifeq L21
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Literal
+	ldc " - "
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) Binary Expression
+;  (401) Unary Pre Expression
+;  (401) Literal
+	iconst_1
+;  (401) End Literal
+	ineg
+;  (401) End UnaryPreExpr
+	i2d
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/c D
+;  (401) End FieldRef
+	dmul
+;  (401) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+	goto L22
+L21:
+;  (401) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (401) Literal
+	ldc " + "
+;  (401) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (401) Field Reference
+;  (401) This
+	aload_0
+;  (401) End This
+	getfield Poly2/c D
+;  (401) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+L22:
+;  (401) Ternary
+	goto L18
+L17:
+;  (401) Literal
+	ldc ""
+;  (401) End Literal
+L18:
+;  (401) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (401) End BinaryExpr
+	areturn
+;  (401) End ReturnStat
+.end method
+
+.method public factor()Ljava/lang/String;
+	.limit stack 50
+	.limit locals 5
+;  (404) Method Declaration (factor)
+;  (405) Local Variable Declaration
+;  (405) Invocation
+	aload_0
+	invokevirtual Poly2/root1()D
+;  (405) End Invocation
+	dstore_1
+;  (405) End LocalDecl
+;  (406) Local Variable Declaration
+;  (406) Invocation
+	aload_0
+	invokevirtual Poly2/root2()D
+;  (406) End Invocation
+	dstore_3
+;  (406) End LocalDecl
+;  (409) Return Statement
+;  (409) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (409) Binary Expression
+;  (409) Binary Expression
+;  (409) Binary Expression
+;  (409) Binary Expression
+;  (409) Field Reference
+;  (409) This
+	aload_0
+;  (409) End This
+	getfield Poly2/a D
+;  (409) End FieldRef
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+;  (409) Literal
+	ldc "(x"
+;  (409) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) End BinaryExpr
+;  (409) Ternary Statement
+;  (409) Binary Expression
+;  (409) Name Expression --
+	dload_1
+;  (409) End NameExpr
+;  (409) Literal
+	iconst_0
+;  (409) End Literal
+	i2d
+	dcmpg
+	iflt L27
+	iconst_0
+	goto L28
+L27:
+	iconst_1
+L28:
+;  (409) End BinaryExpr
+	ifeq L25
+;  (409) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (409) Literal
+	ldc " + "
+;  (409) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) Binary Expression
+;  (409) Unary Pre Expression
+;  (409) Literal
+	iconst_1
+;  (409) End Literal
+	ineg
+;  (409) End UnaryPreExpr
+	i2d
+;  (409) Name Expression --
+	dload_1
+;  (409) End NameExpr
+	dmul
+;  (409) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (409) End BinaryExpr
+	goto L26
+L25:
+;  (409) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (409) Literal
+	ldc " - "
+;  (409) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) Name Expression --
+	dload_1
+;  (409) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (409) End BinaryExpr
+L26:
+;  (409) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) End BinaryExpr
+;  (409) Literal
+	ldc ")(x"
+;  (409) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) End BinaryExpr
+;  (410) Ternary Statement
+;  (410) Binary Expression
+;  (410) Name Expression --
+	dload_3
+;  (410) End NameExpr
+;  (410) Literal
+	iconst_0
+;  (410) End Literal
+	i2d
+	dcmpg
+	iflt L31
+	iconst_0
+	goto L32
+L31:
+	iconst_1
+L32:
+;  (410) End BinaryExpr
+	ifeq L29
+;  (410) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (410) Literal
+	ldc " + "
+;  (410) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (410) Binary Expression
+;  (410) Unary Pre Expression
+;  (410) Literal
+	iconst_1
+;  (410) End Literal
+	ineg
+;  (410) End UnaryPreExpr
+	i2d
+;  (410) Name Expression --
+	dload_3
+;  (410) End NameExpr
+	dmul
+;  (410) End BinaryExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (410) End BinaryExpr
+	goto L30
+L29:
+;  (410) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (410) Literal
+	ldc " - "
+;  (410) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (410) Name Expression --
+	dload_3
+;  (410) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(D)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (410) End BinaryExpr
+L30:
+;  (410) Ternary
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (409) End BinaryExpr
+;  (410) Literal
+	ldc ")"
+;  (410) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (409) End BinaryExpr
+	areturn
+;  (409) End ReturnStat
+.end method
+
+.method public plot(IIIII)[[C
+	.limit stack 50
+	.limit locals 14
+;  (413) Method Declaration (plot)
+;  (414) Local Variable Declaration
+;  (414) Binary Expression
+;  (414) Name Expression --
+	iload 5
+;  (414) End NameExpr
+;  (414) Binary Expression
+;  (414) Binary Expression
+;  (414) Name Expression --
+	iload_2
+;  (414) End NameExpr
+;  (414) Name Expression --
+	iload_1
+;  (414) End NameExpr
+	isub
+;  (414) End BinaryExpr
+;  (414) Literal
+	iconst_1
+;  (414) End Literal
+	iadd
+;  (414) End BinaryExpr
+	imul
+;  (414) End BinaryExpr
+	istore 6
+;  (414) End LocalDecl
+;  (415) Expression Statement
+;  (415) Invocation
+;  (415) Field Reference
+;  (415) Name Expression --
+;  (415) End NameExpr
+	getstatic System/out LIo;
+;  (415) End FieldRef
+	pop
+;  (415) Binary Expression
+	new java/lang/StringBuilder
+	dup
+	invokespecial java/lang/StringBuilder/<init>()V
+;  (415) Literal
+	ldc "X = "
+;  (415) End Literal
+	invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+;  (415) Name Expression --
+	iload 6
+;  (415) End NameExpr
+	invokevirtual java/lang/StringBuilder/append(I)Ljava/lang/StringBuilder;
+	invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+;  (415) End BinaryExpr
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (415) End Invocation
+;  (415) End ExprStat
+;  (416) Local Variable Declaration
+;  (416) NewArray
+;  (416) Name Expression --
+	iload 6
+;  (416) End NameExpr
+;  (416) Binary Expression
+;  (416) Binary Expression
+;  (416) Name Expression --
+	iload 4
+;  (416) End NameExpr
+;  (416) Name Expression --
+	iload_3
+;  (416) End NameExpr
+	isub
+;  (416) End BinaryExpr
+;  (416) Literal
+	iconst_1
+;  (416) End Literal
+	iadd
+;  (416) End BinaryExpr
+	multianewarray [[C 2
+;  (416) End NewArray
+	astore 7
+;  (416) End LocalDecl
+;  (417) For Statement
+;  (417) Local Variable Declaration
+;  (417) Literal
+	iconst_0
+;  (417) End Literal
+	istore 8
+;  (417) End LocalDecl
+L33:
+;  (417) Binary Expression
+;  (417) Name Expression --
+	iload 8
+;  (417) End NameExpr
+;  (417) Name Expression --
+	iload 6
+;  (417) End NameExpr
+	if_icmplt L36
+	iconst_0
+	goto L37
+L36:
+	iconst_1
+L37:
+;  (417) End BinaryExpr
+	ifeq L34
+;  (418) For Statement
+;  (418) Local Variable Declaration
+;  (418) Literal
+	iconst_0
+;  (418) End Literal
+	istore 9
+;  (418) End LocalDecl
+L38:
+;  (418) Binary Expression
+;  (418) Name Expression --
+	iload 9
+;  (418) End NameExpr
+;  (418) Binary Expression
+;  (418) Binary Expression
+;  (418) Name Expression --
+	iload 4
+;  (418) End NameExpr
+;  (418) Name Expression --
+	iload_3
+;  (418) End NameExpr
+	isub
+;  (418) End BinaryExpr
+;  (418) Literal
+	iconst_1
+;  (418) End Literal
+	iadd
+;  (418) End BinaryExpr
+	if_icmplt L41
+	iconst_0
+	goto L42
+L41:
+	iconst_1
+L42:
+;  (418) End BinaryExpr
+	ifeq L39
+;  (419) Expression Statement
+;  (419) Assignment
+;  (419) ArrayAccessExpr target
+;  (419) ArrayAccessExpr
+;  (419) Name Expression --
+	aload 7
+;  (419) End NameExpr
+;  (419) Name Expression --
+	iload 8
+;  (419) End NameExpr
+	aaload
+;  (419) End ArrayAccessExpr
+;  (419) ArrayAccessExpr index
+;  (419) Name Expression --
+	iload 9
+;  (419) End NameExpr
+;  (419) Literal
+	bipush 32
+;  (419) End Literal
+	castore
+;  (419) End Assignment
+;  (419) End ExprStat
+L40:
+;  (418) Expression Statement
+;  (418) Unary Post Expression
+;  (418) Name Expression --
+	iload 9
+;  (418) End NameExpr
+	iinc 9 1
+;  (418) End UnaryPostExpr
+	pop
+;  (418) End ExprStat
+	goto L38
+L39:
+;  (418) End ForStat
+L35:
+;  (417) Expression Statement
+;  (417) Unary Post Expression
+;  (417) Name Expression --
+	iload 8
+;  (417) End NameExpr
+	iinc 8 1
+;  (417) End UnaryPostExpr
+	pop
+;  (417) End ExprStat
+	goto L33
+L34:
+;  (417) End ForStat
+;  (421) Local Variable Declaration
+;  (421) Name Expression --
+	iload_1
+;  (421) End NameExpr
+	i2d
+	dstore 10
+;  (421) End LocalDecl
+;  (422) Local Variable Declaration
+;  (422) Literal
+	iconst_0
+;  (422) End Literal
+	istore 12
+;  (422) End LocalDecl
+;  (423) While Statement
+L43:
+;  (423) Binary Expression
+;  (423) Name Expression --
+	dload 10
+;  (423) End NameExpr
+;  (423) Name Expression --
+	iload 6
+;  (423) End NameExpr
+	i2d
+	dcmpg
+	iflt L45
+	iconst_0
+	goto L46
+L45:
+	iconst_1
+L46:
+;  (423) End BinaryExpr
+	ifeq L44
+;  (424) Local Variable Declaration
+;  (424) Cast Expression
+;  (424) Invocation
+;  (424) Name Expression --
+;  (424) End NameExpr
+;  (424) Invocation
+	aload_0
+;  (424) Name Expression --
+	dload 10
+;  (424) End NameExpr
+	invokevirtual Poly2/evaluate(D)D
+;  (424) End Invocation
+	invokestatic Math/round(D)J
+;  (424) End Invocation
+	l2i
+;  (424) End CastExpr
+	istore 13
+;  (424) End LocalDecl
+;  (425) Expression Statement
+;  (425) Assignment
+;  (425) Binary Expression
+;  (425) Name Expression --
+	dload 10
+;  (425) End NameExpr
+;  (425) Binary Expression
+;  (425) Literal
+	ldc2_w 1.0
+;  (425) End Literal
+;  (425) Name Expression --
+	iload 5
+;  (425) End NameExpr
+	i2d
+	ddiv
+;  (425) End BinaryExpr
+	dadd
+;  (425) End BinaryExpr
+	dstore 10
+;  (425) End Assignment
+;  (425) End ExprStat
+;  (426) If Statement
+;  (426) Binary Expression
+;  (426) Binary Expression
+;  (426) Name Expression --
+	iload 13
+;  (426) End NameExpr
+;  (426) Name Expression --
+	iload 4
+;  (426) End NameExpr
+	if_icmple L48
+	iconst_0
+	goto L49
+L48:
+	iconst_1
+L49:
+;  (426) End BinaryExpr
+	dup
+	ifeq L50
+	pop
+;  (426) Binary Expression
+;  (426) Name Expression --
+	iload 13
+;  (426) End NameExpr
+;  (426) Name Expression --
+	iload_3
+;  (426) End NameExpr
+	if_icmpge L51
+	iconst_0
+	goto L52
+L51:
+	iconst_1
+L52:
+;  (426) End BinaryExpr
+L50:
+;  (426) End BinaryExpr
+	ifeq L47
+;  (427) Expression Statement
+;  (427) Assignment
+;  (427) ArrayAccessExpr target
+;  (427) ArrayAccessExpr
+;  (427) Name Expression --
+	aload 7
+;  (427) End NameExpr
+;  (427) Name Expression --
+	iload 12
+;  (427) End NameExpr
+	aaload
+;  (427) End ArrayAccessExpr
+;  (427) ArrayAccessExpr index
+;  (427) Binary Expression
+;  (427) Name Expression --
+	iload 4
+;  (427) End NameExpr
+;  (427) Name Expression --
+	iload 13
+;  (427) End NameExpr
+	isub
+;  (427) End BinaryExpr
+;  (427) Literal
+	bipush 42
+;  (427) End Literal
+	castore
+;  (427) End Assignment
+;  (427) End ExprStat
+L47:
+;  (426) End IfStat
+;  (429) Expression Statement
+;  (429) Unary Post Expression
+;  (429) Name Expression --
+	iload 12
+;  (429) End NameExpr
+	iinc 12 1
+;  (429) End UnaryPostExpr
+	pop
+;  (429) End ExprStat
+	goto L43
+L44:
+;  (423) End WhileStat
+;  (431) Return Statement
+;  (431) Name Expression --
+	aload 7
+;  (431) End NameExpr
+	areturn
+;  (431) End ReturnStat
+.end method
+
+.method public static print_plot([[C)V
+	.limit stack 50
+	.limit locals 4
+;  (434) Method Declaration (print_plot)
+;  (435) For Statement
+;  (435) Local Variable Declaration
+;  (435) Literal
+	iconst_0
+;  (435) End Literal
+	istore_1
+;  (435) End LocalDecl
+L53:
+;  (435) Binary Expression
+;  (435) Name Expression --
+	iload_1
+;  (435) End NameExpr
+;  (435) Binary Expression
+;  (435) Array length
+;  (435) ArrayAccessExpr
+;  (435) Name Expression --
+	aload_0
+;  (435) End NameExpr
+;  (435) Literal
+	iconst_0
+;  (435) End Literal
+	aaload
+;  (435) End ArrayAccessExpr
+	arraylength
+;  (435) Literal
+	iconst_1
+;  (435) End Literal
+	isub
+;  (435) End BinaryExpr
+	if_icmplt L56
+	iconst_0
+	goto L57
+L56:
+	iconst_1
+L57:
+;  (435) End BinaryExpr
+	ifeq L54
+;  (436) Expression Statement
+;  (436) Invocation
+;  (436) Field Reference
+;  (436) Name Expression --
+;  (436) End NameExpr
+	getstatic System/out LIo;
+;  (436) End FieldRef
+	pop
+;  (436) Literal
+	ldc "  | "
+;  (436) End Literal
+	invokestatic Io/print(Ljava/lang/String;)V
+;  (436) End Invocation
+;  (436) End ExprStat
+;  (438) For Statement
+;  (438) Local Variable Declaration
+;  (438) Literal
+	iconst_0
+;  (438) End Literal
+	istore_2
+;  (438) End LocalDecl
+L58:
+;  (438) Binary Expression
+;  (438) Name Expression --
+	iload_2
+;  (438) End NameExpr
+;  (438) Binary Expression
+;  (438) Array length
+;  (438) Name Expression --
+	aload_0
+;  (438) End NameExpr
+	arraylength
+;  (438) Literal
+	iconst_1
+;  (438) End Literal
+	isub
+;  (438) End BinaryExpr
+	if_icmplt L61
+	iconst_0
+	goto L62
+L61:
+	iconst_1
+L62:
+;  (438) End BinaryExpr
+	ifeq L59
+;  (439) Expression Statement
+;  (439) Invocation
+;  (439) Field Reference
+;  (439) Name Expression --
+;  (439) End NameExpr
+	getstatic System/out LIo;
+;  (439) End FieldRef
+	pop
+;  (439) ArrayAccessExpr
+;  (439) ArrayAccessExpr
+;  (439) Name Expression --
+	aload_0
+;  (439) End NameExpr
+;  (439) Name Expression --
+	iload_2
+;  (439) End NameExpr
+	aaload
+;  (439) End ArrayAccessExpr
+;  (439) Name Expression --
+	iload_1
+;  (439) End NameExpr
+	caload
+;  (439) End ArrayAccessExpr
+	invokestatic Io/print(C)V
+;  (439) End Invocation
+;  (439) End ExprStat
+L60:
+;  (438) Expression Statement
+;  (438) Unary Post Expression
+;  (438) Name Expression --
+	iload_2
+;  (438) End NameExpr
+	iinc 2 1
+;  (438) End UnaryPostExpr
+	pop
+;  (438) End ExprStat
+	goto L58
+L59:
+;  (438) End ForStat
+;  (441) Expression Statement
+;  (441) Invocation
+;  (441) Field Reference
+;  (441) Name Expression --
+;  (441) End NameExpr
+	getstatic System/out LIo;
+;  (441) End FieldRef
+	pop
+;  (441) Literal
+	ldc " |"
+;  (441) End Literal
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (441) End Invocation
+;  (441) End ExprStat
+L55:
+;  (435) Expression Statement
+;  (435) Unary Post Expression
+;  (435) Name Expression --
+	iload_1
+;  (435) End NameExpr
+	iinc 1 1
+;  (435) End UnaryPostExpr
+	pop
+;  (435) End ExprStat
+	goto L53
+L54:
+;  (435) End ForStat
+;  (443) Expression Statement
+;  (443) Invocation
+;  (443) Field Reference
+;  (443) Name Expression --
+;  (443) End NameExpr
+	getstatic System/out LIo;
+;  (443) End FieldRef
+	pop
+;  (443) Literal
+	ldc "--+"
+;  (443) End Literal
+	invokestatic Io/print(Ljava/lang/String;)V
+;  (443) End Invocation
+;  (443) End ExprStat
+;  (444) For Statement
+;  (444) Local Variable Declaration
+;  (444) Literal
+	iconst_0
+;  (444) End Literal
+	istore_3
+;  (444) End LocalDecl
+L63:
+;  (444) Binary Expression
+;  (444) Name Expression --
+	iload_3
+;  (444) End NameExpr
+;  (444) Binary Expression
+;  (444) Array length
+;  (444) Name Expression --
+	aload_0
+;  (444) End NameExpr
+	arraylength
+;  (444) Literal
+	iconst_1
+;  (444) End Literal
+	isub
+;  (444) End BinaryExpr
+	if_icmplt L66
+	iconst_0
+	goto L67
+L66:
+	iconst_1
+L67:
+;  (444) End BinaryExpr
+	ifeq L64
+;  (445) Expression Statement
+;  (445) Invocation
+;  (445) Field Reference
+;  (445) Name Expression --
+;  (445) End NameExpr
+	getstatic System/out LIo;
+;  (445) End FieldRef
+	pop
+;  (445) Literal
+	ldc "-"
+;  (445) End Literal
+	invokestatic Io/print(Ljava/lang/String;)V
+;  (445) End Invocation
+;  (445) End ExprStat
+L65:
+;  (444) Expression Statement
+;  (444) Unary Post Expression
+;  (444) Name Expression --
+	iload_3
+;  (444) End NameExpr
+	iinc 3 1
+;  (444) End UnaryPostExpr
+	pop
+;  (444) End ExprStat
+	goto L63
+L64:
+;  (444) End ForStat
+;  (446) Expression Statement
+;  (446) Invocation
+;  (446) Field Reference
+;  (446) Name Expression --
+;  (446) End NameExpr
+	getstatic System/out LIo;
+;  (446) End FieldRef
+	pop
+;  (446) Literal
+	ldc "+"
+;  (446) End Literal
+	invokestatic Io/println(Ljava/lang/String;)V
+;  (446) End Invocation
+;  (446) End ExprStat
+	return
+.end method
+

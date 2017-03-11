@@ -1,0 +1,57 @@
+.class public MyDouble
+.super Number
+
+.field private val D
+
+.method public <init>()V
+	.limit stack 50
+	.limit locals 1
+;  (95) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial Number/<init>()V
+;  (0) End CInvocation
+;  (95) Field Init Generation Start
+;  (95) Field Init Generation End
+	return
+.end method
+
+.method public <init>(D)V
+	.limit stack 50
+	.limit locals 3
+;  (96) Constructor Declaration
+;  (0) Explicit Constructor Invocation
+	aload_0
+	invokespecial Number/<init>()V
+;  (0) End CInvocation
+;  (96) Field Init Generation Start
+;  (96) Field Init Generation End
+;  (98) Expression Statement
+;  (98) Assignment
+;  (98) This
+	aload_0
+;  (98) End This
+;  (98) Name Expression --
+	dload_1
+;  (98) End NameExpr
+	putfield MyDouble/val D
+;  (98) End Assignment
+;  (98) End ExprStat
+	return
+.end method
+
+.method public getMyDouble()D
+	.limit stack 50
+	.limit locals 1
+;  (101) Method Declaration (getMyDouble)
+;  (101) Return Statement
+;  (101) Field Reference
+;  (101) This
+	aload_0
+;  (101) End This
+	getfield MyDouble/val D
+;  (101) End FieldRef
+	dreturn
+;  (101) End ReturnStat
+.end method
+
