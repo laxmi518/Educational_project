@@ -1,3 +1,0 @@
-public interface Runnable extends java.lang.Runnable {
-    public void run() ;
-}

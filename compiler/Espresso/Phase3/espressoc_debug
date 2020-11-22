@@ -1,2 +1,0 @@
-#!/bin/sh
-java -agentlib:jdwp=transport=dt_socket,server=n,address=localhost:5005,suspend=y -cp bin/:src/Utilities/java_cup_runtime.jar Espressoc -I Include/ -Tsymbol -P:3 $@

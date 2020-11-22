@@ -1,7 +1,0 @@
-import Io2;
-
-public class System2 {
-    Io out;
-    Io in;
-    static void exit() { }
-}
